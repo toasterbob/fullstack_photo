@@ -29,7 +29,7 @@ It will have the following features:
 ## Design Docs
 * [View Wireframes][wireframes]
 
-[wireframes]: docs/wireframes
+[wireframes]: wireframes
 
 
 ## Implementation Timeline
