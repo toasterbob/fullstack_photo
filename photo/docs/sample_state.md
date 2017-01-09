@@ -9,27 +9,19 @@
     logIn: {errors: []},
     createNote: {errors: ["body can't be blank"]}
   },
-  notes: {
+  photo: {
     1: {
-      title: "Sample State",
-      body: "is useful to plan",
-      author_id: 1,
-      notebook_id: 1
+      photo_url: "cloudinary/api",
+      user_id: 1,
+      description: "the day my cat was eaten by a bear"
       tags: {
         1: {
           id: 1
-          name: "Coding"
+          name: "NSFW"
         }
       }
     }
   },
-  notebooks: {
-    1: {
-      title: "Redux",
-      author_id: 1,
-      description: "is cool"
-    }
-  }
-  tagFilters: [1, 7, 14] // Used to track selected Tags for filtering of notes
+  
 }
 ```
