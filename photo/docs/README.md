@@ -26,6 +26,10 @@ It will have the following features:
 - [ ] A production README
 
 
+## Design Docs
+* [View Wireframes][wireframes]
+
+
 ## Implementation Timeline
 
 ### Phase 1: Backend setup and Front End User Authentication (2 days)
