@@ -35,7 +35,7 @@ It will have the following features:
 
 [wireframes]: wireframes
 [components]: component-hierarchy.md
-[sample-state]: sample-state.md
+[sample-state]: sample_state.md
 [api-endpoints]: api-endpoints.md
 [schema]: schema.md
 
