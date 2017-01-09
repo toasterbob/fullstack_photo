@@ -11,27 +11,27 @@ Photo Journal is a photography app for creating a visual journal of one's life i
 
 It will have the following features:  
 
--[ ] New account creation, login, and guest/demo login
+- [ ] New account creation, login, and guest/demo login
 
--[ ] A production README
+- [ ] A production README
 
--[ ] Hosting on Heroku
+- [ ] Hosting on Heroku
 
--[ ] Profile Page
+- [ ] Profile Page
 
--[ ] Posting of Pictures
+- [ ] Posting of Pictures
 
--[ ] Follows
+- [ ] Follows
 
--[ ] Home Feed
+- [ ] Home Feed
 
 Potential features
 
--[ ] Discover
+- [ ] Discover
 
--[ ] Notifications
+- [ ] Notifications
 
--[ ] Tags
+- [ ] Tags
 
 
 ## Implementation Timeline
