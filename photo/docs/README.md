@@ -1,8 +1,11 @@
+<h1>Photo Journal</h1>
+
 https://photo-journal.herokuapp.com/
+
 https://trello.com/b/vK1WTanN/fullstack-photo-journal
 
 
-<h1>Minimum Viable Product</h1>
+<h2>Minimum Viable Product</h2>
 
 Photo Journal is a photography app for creating a visual journal of one's life inspired by 500 px.  It is built using Ruby on Rails and REACT/Redux.    
 
@@ -31,4 +34,4 @@ Potential features
 10) Tags
 
 
-Implementation Timeline
+<h2>Implementation Timeline</h2>
