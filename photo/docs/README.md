@@ -11,11 +11,9 @@ Photo Journal is a photography app for creating a visual journal of one's life i
 
 It will have the following features:  
 
-- [ ] New account creation, login, and guest/demo login
-
-- [ ] A production README
-
 - [ ] Hosting on Heroku
+
+- [ ] New account creation, login, and guest/demo login
 
 - [ ] Profile Page
 
@@ -25,13 +23,7 @@ It will have the following features:
 
 - [ ] Home Feed
 
-Potential features
-
-- [ ] Discover
-
-- [ ] Notifications
-
-- [ ] Tags
+- [ ] A production README
 
 
 ## Implementation Timeline
@@ -40,29 +32,26 @@ Potential features
 
 **Objective:** Functioning rails project with front-end Authentication
 
-### Phase 2: Notes Model, API, and components (2 days)
+### Phase 2: Profile Page, Form, and components (2 days)
 
-**Objective:** Notes can be created, read, edited and destroyed through
-the API.
+**Objective:** Profile can be updated by the owner.  Profiles can be viewed by other users.  
 
-### Phase 3: Notebooks (2 day)
+### Phase 3: Photo model, api, and components (2 days)
 
-**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+**Objective:** Users will be able to upload photos.  Photos can be used on the profile page.  User profile page will show all photos uploaded by user.  
 
-### Phase 4: Tags (1 days)
+### Phase 4: Follows and home feed (2 days)
 
-**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+**Objective:** User will be able to follow other users.  Users will have a feed page based on who they choose to follow.  
 
-### Phase 5: Allow Complex Styling in Notes (1 days, W2 Th 6pm)
+### Phase 5: Styling App and smoothing out details (1 day)
 
-**objective:** Allow rich text editing of notes.
+**objective:** Make everything look nice
 
-### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
-
-**objective:** Add infinite scroll to Notes Index
 
 ### Bonus Features (TBD)
-- [ ] Search notes by content
-- [ ] Set reminders on notes
-- [ ] Changelogs for Notes
-- [ ] Multiple sessions
+- [ ] Discover
+
+- [ ] Notifications
+
+- [ ] Tags
