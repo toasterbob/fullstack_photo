@@ -1,37 +1,68 @@
-<h1>Photo Journal</h1>
+#Photo Journal
 
-https://photo-journal.herokuapp.com/
+[heroku]: https://photo-journal.herokuapp.com/
 
-https://trello.com/b/vK1WTanN/fullstack-photo-journal
+[trello]: https://trello.com/b/vK1WTanN/fullstack-photo-journal
 
 
-<h2>Minimum Viable Product</h2>
+##Minimum Viable Product
 
 Photo Journal is a photography app for creating a visual journal of one's life inspired by 500 px.  It is built using Ruby on Rails and REACT/Redux.    
 
 It will have the following features:  
 
-1) New account creation, login, and guest/demo login
+-[ ] New account creation, login, and guest/demo login
 
-2) A production README
+-[ ] A production README
 
-3) Hosting on Heroku
+-[ ] Hosting on Heroku
 
-4) Profile Page
+-[ ] Profile Page
 
-5) Posting of Pictures
+-[ ] Posting of Pictures
 
-6) Follows
+-[ ] Follows
 
-7) Home Feed
+-[ ] Home Feed
 
 Potential features
 
-8) Discover
+-[ ] Discover
 
-9) Notifications
+-[ ] Notifications
 
-10) Tags
+-[ ] Tags
 
 
-<h2>Implementation Timeline</h2>
+## Implementation Timeline
+
+### Phase 1: Backend setup and Front End User Authentication (2 days)
+
+**Objective:** Functioning rails project with front-end Authentication
+
+### Phase 2: Notes Model, API, and components (2 days)
+
+**Objective:** Notes can be created, read, edited and destroyed through
+the API.
+
+### Phase 3: Notebooks (2 day)
+
+**Objective:** Notes belong to Notebooks that can be created, read, edited and destroyed through the API.
+
+### Phase 4: Tags (1 days)
+
+**Objective:** Notes can be tagged with multiple tags, and tags are searchable.
+
+### Phase 5: Allow Complex Styling in Notes (1 days, W2 Th 6pm)
+
+**objective:** Allow rich text editing of notes.
+
+### Phase 6: - Pagination / infinite scroll for Notes Index (1 day, W2 F 6pm)
+
+**objective:** Add infinite scroll to Notes Index
+
+### Bonus Features (TBD)
+- [ ] Search notes by content
+- [ ] Set reminders on notes
+- [ ] Changelogs for Notes
+- [ ] Multiple sessions
