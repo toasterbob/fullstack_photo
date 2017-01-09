@@ -1,5 +1,8 @@
 #Photo Journal
 
+[Heroku link][heroku]
+[Trello link][trello]
+
 [heroku]: https://photo-journal.herokuapp.com/
 
 [trello]: https://trello.com/b/vK1WTanN/fullstack-photo-journal
