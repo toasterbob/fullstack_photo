@@ -8,24 +8,40 @@ username        | string    | not null, indexed, unique
 email           | string    | not null, indexed, unique
 password_digest | string    | not null
 session_token   | string    | not null, indexed, unique
+first_name      | string    | not null
+last_name       | string    | not null
+city            | string    | not null
+country         | string    | not null
+bio_info        | text      | not null
+last_name       | string    | not null
+profile_pic_url | string    | not null
+cover_photo_url | string    | not null
 
-## notes
+
+## photos
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-title       | string    | not null
-body        | text      | not null
-author_id   | integer   | not null, foreign key (references users), indexed
-notebook_id | integer   | not null, foreign key (references notebooks), indexed
-archived    | boolean   | not null, default: false
+photo_url   | string    | not null
+user_id     | integer   | not null
+description | text      | not null
 
-## notebooks
-column name | data type | details
-------------|-----------|-----------------------
-id          | integer   | not null, primary key
-author_id   | integer   | not null, foreign key (references users), indexed
-title       | string    | not null
-description | string    |
+
+## follows
+column name  | data type | details
+------------ |-----------|-----------------------
+id           | integer   | not null, primary key
+following_id | integer   | not null, foreign key (references users), indexed
+follower_id  | integer   | not null, foreign key (references users), indexed
+
+## notifications
+
+column name     | data type | details
+----------------|-----------|-----------------------
+id              | integer   | not null, primary key
+user_id         | integer   | not null, indexed
+message         | text      | not null
+seen            | boolean   | not null
 
 ## tags
 column name | data type | details
@@ -37,5 +53,5 @@ name        | string    | not null
 column name | data type | details
 ------------|-----------|-----------------------
 id          | integer   | not null, primary key
-note_id     | integer   | not null, foreign key (references notes), indexed, unique [tag_id]
+photo_id    | integer   | not null, foreign key (references photos), indexed, unique [tag_id]
 tag_id      | integer   | not null, foreign key (references tags), indexed
