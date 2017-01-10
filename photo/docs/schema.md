@@ -34,6 +34,7 @@ id           | integer   | not null, primary key
 following_id | integer   | not null, foreign key (references users), indexed
 follower_id  | integer   | not null, foreign key (references users), indexed
 
+##POST MVP 
 ## notifications
 
 column name     | data type | details
