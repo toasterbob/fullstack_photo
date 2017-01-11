@@ -4,10 +4,7 @@
   align-items: center;
 }
 
-.header{
-  display: flex; 
-  justify-content: space-between;
-}
+
 
 .splash {
 
@@ -20,7 +17,7 @@
   position: relative;
 
   .titles {
-
+    padding-left: 20px;
   }
 
   h1 {
