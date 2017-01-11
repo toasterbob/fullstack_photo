@@ -5,7 +5,6 @@
 }
 
 
-
 .splash {
 
   align-items: center;
@@ -24,9 +23,11 @@
     width: 100%;
     justify-content: center;
     align-items: center;
+
     .title-text {
       justify-content: center;
       width: 100%;
+
     }
 
     h1 {
@@ -37,6 +38,25 @@
     h2 {
       font-size: 18px;
       text-align: center;
+    }
+
+    .buttons {
+      display: flex;
+      justify-content: center;
+
+      button {
+        border: 0px;
+        border-radius: 0px;
+        background-color: #5fb5e8;
+        box-shadow: 0px;
+        padding: 10px 20px;
+        font-size: 18px;
+        font-family: sans-serif;
+      }
+
+      button:hover {
+        background-color: #80cbf7;
+      }
     }
 
   }
