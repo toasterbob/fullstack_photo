@@ -1,4 +1,10 @@
 
+.header{
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
 button {
   border-radius: 5px;
   padding: 5px 15px;

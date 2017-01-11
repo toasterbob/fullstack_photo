@@ -12,13 +12,17 @@ const signupButton = e => {
 };
 
 const sessionLinks = () => (
-  <nav className="login-signup">
-
-    <button className="header-button" onClick={loginButton}>Login</button>
-
-    <button className="header-button" onClick={signupButton}>Sign up</button>
-
-  </nav>
+  <div className="header">
+    <div>
+      <img src="http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142/v1484119573/v8_c5rdfy.png" />
+    </div>
+    <div>
+      <nav className="login-signup">
+        <button className="header-button" onClick={loginButton}>Login</button>
+        <button className="header-button" onClick={signupButton}>Sign up</button>
+      </nav>
+    </div>
+  </div>
 );
 
 const personalHeader = (currentUser, logout) => (
