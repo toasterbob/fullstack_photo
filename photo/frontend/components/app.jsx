@@ -1,5 +1,16 @@
 import React from 'react';
 import HeaderContainer from './header/header_container';
+import { hashHistory } from 'react-router';
+
+const signupButton = e => {
+  e.preventDefault();
+  hashHistory.push("/signup");
+};
+
+const loginGuestButton = e => {
+  e.preventDefault();
+  hashHistory.push("/signup");
+};
 
 const App = ({ children }) => (
   <div className="home">
@@ -11,12 +22,16 @@ const App = ({ children }) => (
       { children }
 
       <div className="titles">
-        <br />
+
         <div className="title-text">
 
           <h1> Tell your life story in pictures</h1>
           <h2>Showcase your adventures, share your amazing photos, stay inspired!</h2>
-          <br/> <br/><br/> <br/>
+          <br />
+          <div className="buttons">
+            <button className="header-button" onClick={signupButton}> &nbsp; Get Started</button>
+            <button className="header-button" onClick={loginGuestButton}>   Guest Demo </button>
+          </div>
         </div>
       </div>
     </div>
