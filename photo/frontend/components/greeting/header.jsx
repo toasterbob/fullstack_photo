@@ -16,23 +16,25 @@ const sessionLinks = () => (
 
     <button className="header-button" onClick={loginButton}>Login</button>
 
-     &nbsp; &nbsp;
-     
+     &nbsp; fadf &nbsp;
+
     <button className="header-button" onClick={signupButton}>Sign up</button>
 
   </nav>
 );
 
-const personalGreeting = (currentUser, logout) => (
+const personalHeader = (currentUser, logout) => (
 
   <hgroup className="header-group">
-    <h2 className="header-name">Hi, {currentUser.username}!</h2>
-    <button className="header-button" onClick={logout}>Log Out</button>
+    <div>
+      Hi, adfds {currentUser.username}!
+      <button className="header-button" onClick={logout}>Log Out</button>
+    </div>
   </hgroup>
 );
 
-const Greeting = ({ currentUser, logout}) => (
-  currentUser ? personalGreeting(currentUser, logout) : sessionLinks()
+const Header = ({ currentUser, logout}) => (
+  currentUser ? personalHeader(currentUser, logout) : sessionLinks()
 );
 
-export default Greeting;
+export default Header;
