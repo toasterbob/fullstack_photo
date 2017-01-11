@@ -11,10 +11,12 @@ const signupButton = e => {
   hashHistory.push("/signup");
 };
 
+const logoLink = "http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142/v1484119573/v8_c5rdfy.png";
+
 const sessionLinks = () => (
   <div className="header">
     <div>
-      <img src="http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142/v1484119573/v8_c5rdfy.png" />
+      <img src={logoLink} />
     </div>
     <div>
       <nav className="login-signup">
@@ -27,12 +29,15 @@ const sessionLinks = () => (
 
 const personalHeader = (currentUser, logout) => (
 
-  <hgroup className="header-group">
-    <div className="header-name">
-      Welcome, {currentUser.username}!
+  <div className="header">
+    <div >
+      <img src={logoLink} />
+    </div>
+    <div className="header-greet">
+      Welcome, {currentUser.username} &nbsp; 
       <button className="header-button" onClick={logout}>Log Out</button>
     </div>
-  </hgroup>
+  </div>
 );
 
 const Header = ({ currentUser, logout}) => (

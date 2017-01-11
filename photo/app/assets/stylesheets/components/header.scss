@@ -3,11 +3,16 @@
   display: flex;
   justify-content: space-between;
   margin: 5px;
+
+  .header-greet {
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
 }
 
 button {
   border-radius: 5px;
-  padding: 5px 15px;
+  padding: 10px 20px;
   font-size: 12px;
   text-decoration: none;
   margin: 5px;
