@@ -8,7 +8,6 @@ const App = ({ children }) => (
 
     <div className="splash">
 
-
       { children }
 
       <div className="titles">
