@@ -1,6 +1,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import {signup, login, logout} from './util/session_api_util';
 // import {signup, login, logout} from './actions/session_actions';
 // import configureStore from './store/store.js';
 // import Root from './components/root';
@@ -22,5 +23,8 @@ import ReactDOM from 'react-dom';
 // });
 document.addEventListener('DOMContentLoaded', () => {
     const root = document.getElementById('root');
+    window.signup = signup;
+    window.login = login;
+    window.logout = logout; 
     ReactDOM.render(<h1>Welcome to Photo Journal</h1>, root);
 });
