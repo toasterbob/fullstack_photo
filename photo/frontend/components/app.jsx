@@ -4,8 +4,13 @@ import HeaderContainer from './header/header_container';
 const App = ({ children }) => (
   <div className="home">
     <div className="header">
-      <img src="http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142/v1484119573/v8_c5rdfy.png" />
-      <HeaderContainer />
+      <div>
+        <img src="http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142/v1484119573/v8_c5rdfy.png" />
+      </div>
+      <div>
+        <HeaderContainer />
+
+      </div>
     </div>
     <div className="splash">
 
