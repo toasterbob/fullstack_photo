@@ -1,6 +1,8 @@
 import React from 'react';
 import HeaderContainer from './header/header_container';
 import { hashHistory } from 'react-router';
+import { login } from '../actions/session_actions';
+
 
 const signupButton = e => {
   e.preventDefault();
@@ -9,10 +11,13 @@ const signupButton = e => {
 
 const loginGuestButton = e => {
   e.preventDefault();
-  hashHistory.push("/signup");
+  const user = {username: "guest", password: "password"}; //need to create in database
+  login(user);
 };
 
-const App = ({ children }) => (
+const App = ({ children }) => {
+
+  return (
   <div className="home">
 
     <HeaderContainer />
@@ -36,6 +41,6 @@ const App = ({ children }) => (
       </div>
     </div>
   </div>
-);
+)};
 
 export default App;
