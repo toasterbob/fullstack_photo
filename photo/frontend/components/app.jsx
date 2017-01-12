@@ -2,6 +2,7 @@ import React from 'react';
 import HeaderContainer from './header/header_container';
 import { hashHistory } from 'react-router';
 import { login } from '../actions/session_actions';
+import TitleContainer from './titles/title_container';
 
 
 const signupButton = e => {
@@ -35,7 +36,7 @@ const App = ({ children }) => {
           <br />
           <div className="buttons">
             <button className="header-button" onClick={signupButton}> &nbsp; Get Started</button>
-            <button className="header-button" onClick={loginGuestButton}>   Guest Demo </button>
+            <TitleContainer />
           </div>
         </div>
       </div>
