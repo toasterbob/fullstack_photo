@@ -16,7 +16,9 @@ const logoLink = "http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142
 const sessionLinks = () => (
   <div className="header">
     <div>
-      <img src={logoLink} />
+      <a href="/">
+        <img src={logoLink} />
+      </a>
     </div>
     <div>
       <nav className="login-signup">
@@ -34,7 +36,7 @@ const personalHeader = (currentUser, logout) => (
       <img src={logoLink} />
     </div>
     <div className="header-greet">
-      Welcome, {currentUser.username} &nbsp; 
+      Welcome, {currentUser.username} &nbsp;
       <button className="header-button" onClick={logout}>Log Out</button>
     </div>
   </div>
