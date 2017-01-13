@@ -20,7 +20,7 @@ export const signup = user => dispatch => (
 );
 
 export const logout = () => dispatch => (
-  APIUtil.logout().then(user => {
+  APIUtil.logout().then(() => {
     dispatch(receiveCurrentUser(null));
     hashHistory.push("/");
   }
