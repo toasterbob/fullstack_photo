@@ -6,12 +6,17 @@ import {defaultCoverPic, defaultProfilePic} from '../links';
 let coverPic = defaultCoverPic;
 let profilePic = defaultProfilePic;
 
+
+
+
 class Profile extends React.Component {
 	constructor(props) {
 		super(props);
 	}
 
-
+	componentDidMount(){
+		this.props.getUser(this.props.currentUser);
+	}
 
   render() {
     return (
@@ -33,6 +38,7 @@ class Profile extends React.Component {
 						<br/>
 						<h2>Anywhere, USA</h2>
 						<h2>{this.props.currentUser.id}</h2>
+						<h2>{this.props.profile.id}</h2>
 						<hr/>
           </div>
         </div>
