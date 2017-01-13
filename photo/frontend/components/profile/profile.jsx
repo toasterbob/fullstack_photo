@@ -32,6 +32,7 @@ class Profile extends React.Component {
             <h1>Guest User</h1>
 						<br/>
 						<h2>Anywhere, USA</h2>
+						<h2>{this.props.currentUser.id}</h2>
 						<hr/>
           </div>
         </div>
