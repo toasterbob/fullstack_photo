@@ -3,22 +3,23 @@ import HeaderContainer from '../header/header_container';
 import {defaultCoverPic, defaultProfilePic} from '../links';
 
 
-let coverPic = defaultCoverPic;
-let profilePic = defaultProfilePic;
-
-
-
 
 class Profile extends React.Component {
 	constructor(props) {
 		super(props);
+
 	}
+
 
 	componentDidMount(){
 		this.props.getUser(this.props.currentUser);
 	}
 
+
   render() {
+		
+		let coverPic = defaultCoverPic;
+		let profilePic = defaultProfilePic;
     return (
       <div>
 

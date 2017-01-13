@@ -32,7 +32,7 @@ const App = ({ children }) => {
         <div className="title-text">
 
           <h1> Tell your life story in pictures</h1>
-          <h2>Showcase your adventures, share your amazing photos, stay inspired!</h2>
+          <h2>Showcase your adventures, share your unique photos, stay inspired!</h2>
           <br />
           <div className="buttons">
             <button className="header-button" onClick={signupButton}> &nbsp; Get Started</button>
