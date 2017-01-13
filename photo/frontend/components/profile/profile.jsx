@@ -1,20 +1,17 @@
 import React from 'react';
 import HeaderContainer from '../header/header_container';
+import {defaultCoverPic, defaultProfilePic} from '../links';
 
 
-let defaultCoverPic = "https://source.unsplash.com/2oFdVd00xOg/1600x500";
-let defaultProfilePic = "http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_110/v1484255960/profile_ans18c.png";
+let coverPic = defaultCoverPic;
+let profilePic = defaultProfilePic;
 
 class Profile extends React.Component {
 	constructor(props) {
 		super(props);
-    this.coverPhoto = this.coverPhoto.bind(this);
 	}
 
-  coverPhoto(cover, photo){
-    defaultCoverPic = cover;
-		defaultProfilePic = photo;
-  }
+
 
   render() {
     return (
@@ -23,17 +20,19 @@ class Profile extends React.Component {
         <HeaderContainer />
 
         <div className="profile">
-          <div className="cover-photo" style={{backgroundImage: `url('${defaultCoverPic}')`, height: "300px", width: "auto"}} >
+          <div className="cover-photo" style={{backgroundImage: `url('${coverPic}')`, height: "300px", width: "auto"}} >
 
           </div>
 					<div className="cover-photo"
 								style={{backgroundImage: `url('${defaultProfilePic}')`,
-								height: "110", width: "110px", margin: "-55px auto 0px auto"}} >
+								height: "110px", width: "110px", margin: "-55px auto 0px auto"}} >
 
 					</div>
-          <div>
-            <h1>Welcome to your profile page!</h1>
-            <h2>It's amazing!</h2>
+          <div className="name">
+            <h1>Guest User</h1>
+						<br/>
+						<h2>Anywhere, USA</h2>
+						<hr/>
           </div>
         </div>
       </div>
