@@ -5,11 +5,11 @@ const ProfileReducer = (oldState = {}, action) => {
   Object.freeze(oldState);
   switch (action.type) {
     case RECEIVE_USER:
-      return merge({}, oldState, {[action.user.id]: action.user});
+      return action.user;
     default:
       return oldState;
 
   }
 };
 
-export default ProfileReducer; 
+export default ProfileReducer;

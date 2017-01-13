@@ -3,10 +3,10 @@ import {fetchUser} from '..//util/profile_api_util';
 export const RECEIVE_USER = 'RECEIVE_USER';
 
 export const getUser = user => dispatch => (
-  fetchUser(user).then(user => dispatch(receiveUser))
+  fetchUser(user).then(showUser => dispatch(receiveUser(showUser)))
 );
 
 const receiveUser = user => ({
-  RECEIVE_USER,
+  type: RECEIVE_USER,
   user
 });

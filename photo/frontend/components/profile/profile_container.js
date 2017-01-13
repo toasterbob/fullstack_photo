@@ -3,8 +3,8 @@ import Profile from './profile';
 import { getUser } from '../../actions/profile_actions';
 
 const mapStateToProps = ({ profile, session }) => ({
-  user: profile.user,
-  currentUser: session.currentUser || {} 
+  profile: profile,
+  currentUser: session.currentUser || {}
 });
 
 const mapDispatchToProps = (dispatch) => ({
