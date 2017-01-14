@@ -17,10 +17,58 @@ class Profile extends React.Component {
 
 
   render() {
-		
-		let coverPic = defaultCoverPic;
-		let profilePic = defaultProfilePic;
-    return (
+
+		let coverPic;
+		if (this.props.profile.cover_photo_url){
+			coverPic = this.props.profile.cover_photo_url;
+		} else {
+			coverPic = defaultCoverPic;
+		}
+
+		let profilePic;
+		if (this.props.profile.profile_pic_url){
+			profilePic = this.props.profile.profile_pic_url;
+		} else {
+			profilePic = defaultProfilePic;
+		}
+
+		let firstName;
+		if (this.props.profile.first_name){
+			firstName = this.props.profile.first_name;
+		} else {
+			firstName = "Enter";
+		}
+
+		let lastName;
+		if (this.props.profile.last_name){
+			lastName = this.props.profile.last_name;
+		} else {
+			lastName = "Name";
+		}
+
+		let town;
+		if (this.props.profile.city){
+			town = this.props.profile.city;
+		} else {
+			town = "Anywhere";
+		}
+
+		let country;
+		if (this.props.profile.country){
+			country = this.props.profile.country;
+		} else {
+			country = "Planet Earth";
+		}
+
+		let bio;
+		if (this.props.profile.bio){
+			bio = this.props.profile.bio;
+		} else {
+			bio = "I really want to update my bio!";
+		}
+
+
+		return (
       <div>
 
         <HeaderContainer />
@@ -35,11 +83,10 @@ class Profile extends React.Component {
 
 					</div>
           <div className="name">
-            <h1>Guest User</h1>
+            <h1>{firstName} {lastName}</h1>
 						<br/>
-						<h2>Anywhere, USA</h2>
-						<h2>{this.props.currentUser.id}</h2>
-						<h2>{this.props.profile.id}</h2>
+						<h2>{town}, {country}</h2>
+						<br/>
 						<hr/>
           </div>
         </div>
