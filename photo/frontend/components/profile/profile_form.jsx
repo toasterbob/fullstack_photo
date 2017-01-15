@@ -107,7 +107,6 @@ class ProfileForm extends React.Component {
                 onChange={this.update('profile_pic_url')} />
             </label>
             <br />
-            <Link to={'profile'}>Cancel</Link>&nbsp;
             <input type="submit" value="Update Profile" />
           </form>
 

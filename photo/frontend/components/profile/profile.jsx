@@ -2,12 +2,18 @@ import React from 'react';
 import HeaderContainer from '../header/header_container';
 import {defaultCoverPic, defaultProfilePic} from '../links';
 import { hashHistory } from 'react-router';
-
+import Modal from 'react-modal';
+import ModalStyle from './modal_style';
+import ProfileFormContainer from './profile_form_container';
 
 class Profile extends React.Component {
 	constructor(props) {
 		super(props);
-
+		this.state = {
+			modalOpen: false
+		};
+		this.openModal = this.openModal.bind(this);
+		this.closeModal = this.closeModal.bind(this);
 	}
 
 
@@ -15,6 +21,13 @@ class Profile extends React.Component {
 		this.props.getUser(this.props.currentUser);
 	}
 
+	openModal() {
+		this.setState({modalOpen: true});
+	}
+
+	closeModal() {
+		this.setState({modalOpen: false});
+	}
 
 
 
@@ -91,8 +104,7 @@ class Profile extends React.Component {
 					</div>
 					<div className="edit-profile" style={{ margin: "-55px auto 0px auto"}} >
 							<div>
-								<button onClick={editButton}>Edit your profile</button>
-
+								<button onClick={this.openModal}>Edit your profile</button>
 							</div>
 
 					</div>
@@ -104,8 +116,21 @@ class Profile extends React.Component {
 						<br/>
 						<hr/>
           </div>
+
         </div>
+
+									<div>
+									
+										<Modal
+											contentLabel="Modal"
+											style={ModalStyle}
+											isOpen={this.state.modalOpen}
+											onRequestClose={this.closeModal}>
+											<ProfileFormContainer />
+										</Modal>
+									</div>
       </div>
+
     );
   }
 }

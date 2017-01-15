@@ -5,6 +5,7 @@ import ReactDOM from 'react-dom';
 import {signup, login, logout} from './actions/session_actions';
 import configureStore from './store/store.js';
 import Root from './components/root';
+import Modal from 'react-modal';
 
 document.addEventListener('DOMContentLoaded', () => {
     let store;
@@ -19,5 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
      window.store = store;
      window.login = login;
     // window.logout = logout;
+    Modal.setAppElement(document.body);
     ReactDOM.render(<Root store={ store }/>, root);
 });
