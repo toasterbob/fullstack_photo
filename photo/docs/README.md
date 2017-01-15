@@ -60,7 +60,7 @@ It will have the following features:
 
 ### Phase 4: Follows and home feed (2 days)
 
-**Objective:** User will be able to follow other users.  Users will have a feed page based on who they choose to follow.  
+**Objective:** User will be able to follow other users.  Users will have a feed page based on whom they choose to follow.  
 
 ### Phase 5: Styling App and smoothing out details (1 day)
 
