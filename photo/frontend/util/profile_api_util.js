@@ -5,3 +5,11 @@ export const fetchUser = (user) => (
     data: {user}
   })
 );
+
+export const updatesUser = (user) => (
+  $.ajax({
+    method: 'PATCH',
+    url: `api/users/${user.id}`,
+    data: {user}
+  })
+);
