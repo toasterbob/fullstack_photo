@@ -1,6 +1,6 @@
 import { connect } from 'react-redux';
-import Profile from './profile';
-import { getUser } from '../../actions/profile_actions';
+import ProfileForm from './profile_form';
+import { getUser, updateUser } from '../../actions/profile_actions';
 
 const mapStateToProps = ({ profile, session }) => ({
   profile: profile,
@@ -8,10 +8,11 @@ const mapStateToProps = ({ profile, session }) => ({
 });
 
 const mapDispatchToProps = (dispatch) => ({
-  getUser: user => dispatch(getUser(user))
+  getUser: user => dispatch(getUser(user)),
+  updateUser: profile => dispatch(updateUser(profile))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Profile);
+)(ProfileForm);
