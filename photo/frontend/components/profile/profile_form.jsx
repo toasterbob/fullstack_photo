@@ -73,8 +73,30 @@ class ProfileForm extends React.Component {
                 onChange={this.update('email')} />
             </label>
             <br />
-            {this.state.id}
 
+            <label>Bio: &nbsp;
+              <input
+                type="comment"
+                value={this.state.bio}
+                onChange={this.update('bio')} />
+            </label>
+            <br />
+
+            <label>Cover Photo: &nbsp;
+              <input
+                type="text"
+                value={this.state.cover_photo_url}
+                onChange={this.update('cover_photo_url')} />
+            </label>
+            <br />
+
+            <label>Profile Pic: &nbsp;
+              <input
+                type="text"
+                value={this.state.profile_pic_url}
+                onChange={this.update('profile_pic_url')} />
+            </label>
+            <br />
 
             <input type="submit" value="Update Profile" />
           </form>
