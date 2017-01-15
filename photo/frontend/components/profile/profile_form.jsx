@@ -1,10 +1,20 @@
 import React from 'react';
+import { Link } from 'react-router';
 
 class ProfileForm extends React.Component {
 	constructor(props) {
 		super(props);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = {};
+    this.state = {
+      first_name: '',
+      last_name: '',
+      city: '',
+      country: '',
+      email: '',
+      bio: '',
+      cover_photo_url: '',
+      profile_pic_url: ''
+    };
 	}
 
   componentDidMount(){
@@ -74,7 +84,7 @@ class ProfileForm extends React.Component {
             </label>
             <br />
 
-            <label>Bio: &nbsp;
+            <label>About: &nbsp;
               <input
                 type="comment"
                 value={this.state.bio}
@@ -97,7 +107,7 @@ class ProfileForm extends React.Component {
                 onChange={this.update('profile_pic_url')} />
             </label>
             <br />
-
+            <Link to={'profile'}>Cancel</Link>&nbsp;
             <input type="submit" value="Update Profile" />
           </form>
 

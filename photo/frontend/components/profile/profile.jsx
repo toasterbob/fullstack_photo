@@ -1,7 +1,7 @@
 import React from 'react';
 import HeaderContainer from '../header/header_container';
 import {defaultCoverPic, defaultProfilePic} from '../links';
-
+import { hashHistory } from 'react-router';
 
 
 class Profile extends React.Component {
@@ -14,6 +14,8 @@ class Profile extends React.Component {
 	componentDidMount(){
 		this.props.getUser(this.props.currentUser);
 	}
+
+
 
 
   render() {
@@ -67,6 +69,11 @@ class Profile extends React.Component {
 			bio = "I really want to update my bio!";
 		}
 
+		const editButton = e => {
+			e.preventDefault();
+			hashHistory.push("/profile/edit");
+		};
+
 
 		return (
       <div>
@@ -74,15 +81,23 @@ class Profile extends React.Component {
         <HeaderContainer />
 
         <div className="profile">
-          <div className="cover-photo" style={{backgroundImage: `url('${coverPic}')`, height: "300px", width: "auto"}} >
+          <div className="cover-photo" style={{backgroundImage: `url('${coverPic}')`, height: "400px", width: "auto"}} >
 
           </div>
-					<div className="cover-photo"
+					<div className="profile-photo"
 								style={{backgroundImage: `url('${defaultProfilePic}')`,
 								height: "110px", width: "110px", margin: "-55px auto 0px auto"}} >
 
 					</div>
+					<div className="edit-profile" style={{ margin: "-55px auto 0px auto"}} >
+							<div>
+								<button onClick={editButton}>Edit your profile</button>
+
+							</div>
+
+					</div>
           <div className="name">
+						<br/>
             <h1>{firstName} {lastName}</h1>
 						<br/>
 						<h2>{town}, {country}</h2>

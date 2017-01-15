@@ -30,6 +30,7 @@ const Root = ({ store }) => {
         <Route path="/signup" component={ SessionFormContainer } onEnter={_redirectIfLoggedIn}/>
         <Route path="/profile" component={ ProfileContainer } onEnter={_ensureLoggedIn}/>
         <Route path="/profile/edit" component={ ProfileFormContainer } onEnter={_ensureLoggedIn}/>
+        <Route path="/profile/:id" component={ ProfileContainer } onEnter={_ensureLoggedIn}/>
     </Router>
   </Provider>
 );
