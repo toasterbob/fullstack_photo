@@ -18,7 +18,8 @@ class Profile extends React.Component {
       bio: '',
       cover_photo_url: '',
       profile_pic_url: '',
-			modalOpen: false
+			modalOpen: false,
+			idPresent: false
 		};
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
@@ -30,7 +31,11 @@ class Profile extends React.Component {
   }
 
 	componentDidMount(){
-		this.props.getUser(this.props.currentUser);
+		let user = this.props.currentUser;
+		if (this.props.params.id) {
+			user.id = this.props.params.id;
+		}
+		this.props.getUser(user);
 	}
 
 	openModal() {
@@ -105,11 +110,19 @@ class Profile extends React.Component {
 			bio = "I really want to update my bio!";
 		}
 
+		let idPresent = this.props.params.id;
+
 		const editButton = e => {
 			e.preventDefault();
 			hashHistory.push("/profile/edit");
 		};
 
+		let someButton;
+		if (this.props.params.id) {
+			someButton = "";
+		} else {
+			someButton = <button onClick={this.openModal}>Edit your profile</button>;
+		}
 
 		return (
       <div>
@@ -127,7 +140,7 @@ class Profile extends React.Component {
 					</div>
 					<div className="edit-profile" style={{ margin: "-55px auto 0px auto"}} >
 							<div>
-								<button onClick={this.openModal}>Edit your profile</button>
+								{someButton}
 							</div>
 
 					</div>
@@ -139,9 +152,7 @@ class Profile extends React.Component {
 						<br/>
 						<hr/>
           </div>
-
         </div>
-
 									<div>
 
 										<Modal
