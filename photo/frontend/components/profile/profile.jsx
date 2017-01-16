@@ -25,6 +25,7 @@ class Profile extends React.Component {
 		this.closeModal = this.closeModal.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
 		this.coverPhotoWidget = this.coverPhotoWidget.bind(this);
+		this.profilePhotoWidget = this.profilePhotoWidget.bind(this);
 	}
 
 	componentWillReceiveProps(newProps) {
@@ -33,6 +34,11 @@ class Profile extends React.Component {
 
 		} else {
 			this.setState({cover_photo_url: defaultCoverPic});
+		}
+		if (newProps.profile.profile_pic_url){
+
+		} else {
+			this.setState({profile_pic_url: defaultProfilePic});
 		}
   }
 
@@ -69,6 +75,14 @@ class Profile extends React.Component {
 																	upload_preset: 'vc2h1vv9' },
 																	(error, result) => {
 				this.setState({cover_photo_url: result[0].secure_url});
+			});
+	}
+
+	profilePhotoWidget() {
+		cloudinary.openUploadWidget({ cloud_name: 'dseky3p5e',
+																	upload_preset: 'profile' },
+																	(error, result) => {
+				this.setState({profile_pic_url: result[0].secure_url});
 			});
 	}
 
@@ -148,7 +162,7 @@ class Profile extends React.Component {
 
           </div>
 					<div className="profile-photo"
-								style={{backgroundImage: `url('${defaultProfilePic}')`,
+								style={{backgroundImage: `url('${profilePic}')`,
 								height: "110px", width: "110px", margin: "-55px auto 0px auto"}} >
 
 					</div>
@@ -182,9 +196,9 @@ class Profile extends React.Component {
 								          </div>
 								        </div>
 								        <div className="profile-photo"
-								              style={{backgroundImage: `url('${defaultProfilePic}')`,
+								              style={{backgroundImage: `url('${this.state.profile_pic_url}')`,
 								              height: "110px", width: "110px", margin: "-55px auto 0px auto"}} >
-								              <div className="camera"></div>
+								              <div className="camera" onClick={this.profilePhotoWidget}></div>
 								        </div>
 
 								          <div className="form-fields">
