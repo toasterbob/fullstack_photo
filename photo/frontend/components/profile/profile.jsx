@@ -24,10 +24,16 @@ class Profile extends React.Component {
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.coverPhotoWidget = this.coverPhotoWidget.bind(this);
 	}
 
 	componentWillReceiveProps(newProps) {
     this.setState(newProps.profile);
+		if (newProps.profile.cover_photo_url){
+
+		} else {
+			this.setState({cover_photo_url: defaultCoverPic});
+		}
   }
 
 	componentDidMount(){
@@ -57,6 +63,14 @@ class Profile extends React.Component {
       this.setState({[field]: e.target.value});
     };
   }
+
+	coverPhotoWidget() {
+		cloudinary.openUploadWidget({ cloud_name: 'dseky3p5e',
+																	upload_preset: 'vc2h1vv9' },
+																	(error, result) => {
+				this.setState({cover_photo_url: result[0].secure_url});
+			});
+	}
 
 
   render() {
@@ -161,8 +175,8 @@ class Profile extends React.Component {
 											isOpen={this.state.modalOpen}
 											onRequestClose={this.closeModal}>
 											<div className="profile-form">
-								        <div className="cover-photo" style={{backgroundImage: `url('${coverPic}')`, height: "150px", width: "600px"}} >
-								          <div className="combo">
+								        <div className="cover-photo" style={{backgroundImage: `url('${this.state.cover_photo_url}')`, height: "150px", width: "600px"}} >
+								          <div className="combo" onClick={this.coverPhotoWidget}>
 								            <div className="camera"></div>
 								          <div>&nbsp; Change your cover photo</div>
 								          </div>
