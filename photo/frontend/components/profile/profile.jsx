@@ -206,7 +206,12 @@ class Profile extends React.Component {
 								            </label>
 								            <br/><br/>
 								            <div className="submitButton">
-								              <input type="submit" value="Save" />
+															<div>
+																<button className="modalClose" onClick={this.closeModal}>Cancel</button>
+															</div>
+															<div>
+																<input type="submit" value="Save" />
+															</div>
 								            </div>
 
 								          </form>
