@@ -35,6 +35,7 @@ class ProfileForm extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.updateUser(this.state);
+    this.closeModal();
   }
 
   render() {
