@@ -80,10 +80,35 @@
     text-align: center;
   }
 
+  input[type=submit]:hover {
+    opacity: .8;
+  }
+
+  .modalClose {
+    border-radius: 5px;
+    width: 70px;
+    background-color: #089ae2;
+    box-shadow: 0px;
+    padding: 10px 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+  }
+
   .submitButton {
     display: flex;
     justify-content: center;
+    align-items: center;
+  }
 
+  .modalClose:hover {
+    opacity: .8;
   }
 
 }
