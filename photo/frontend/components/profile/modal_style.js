@@ -15,10 +15,10 @@ const ModalStyle = {
     marginRight           : 'auto',
     transform             : 'translate(-50%, -50%)',
     borderRadius          : '3px',
-    border                : '1px solid #eff2f7',
-    padding               : '0px 20px',
+    border                : '0px solid #eff2f7',
+    padding               : '0px 0px',
     backgroundColor       : '#f7faff',
-    width                 : '500px',
+    width                 : '600px',
     height                : '600px'
   }
 };
