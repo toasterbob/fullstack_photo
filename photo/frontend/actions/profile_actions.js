@@ -9,7 +9,7 @@ export const getUser = user => dispatch => (
 
 export const updateUser = user => dispatch => (
   updatesUser(user).then(changeUser => dispatch(receiveUser(changeUser)))
-    .then(hashHistory.push('/profile'))
+    // .then(hashHistory.push('/profile'))
 );
 
 const receiveUser = user => ({
