@@ -1,0 +1,89 @@
+
+.profile-form {
+
+
+  .cover-photo {
+    display: flex;
+    justify-content: center;
+    vertical-align: center;
+    color: white;
+  }
+
+  .profile-photo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 500px;
+  }
+
+  form {
+    padding: 25px;
+
+    input {
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 3px;
+      margin-bottom: 15px;
+      width: 245px;
+      font-family: sans-serif;
+    }
+
+    textarea {
+      width: 520px;
+      height: 70px;
+      background-color: white;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+
+    }
+  }
+
+  .combo {
+    display: flex;
+    align-items: center;
+  }
+
+  .camera {
+    background-image: url("http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_21/v1484520811/camera2_mqshxv.png");
+    height: 18px;
+    width: 22px;
+  }
+  .camera:hover {
+    opacity: .5;
+  }
+
+  h3 {
+    font-family: sans-serif;
+    color: #80cbf7;
+    font-size: 14px;
+  }
+
+  label {
+    background-color: white;
+    border: 1px solid #eaf1f5;
+    padding: 10px, 10px;
+  }
+
+  input[type=submit] {
+
+    border-radius: 5px;
+    width: 70px;
+    background-color: #1ec93d;
+    box-shadow: 0px;
+    padding: 10px 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  .submitButton {
+    display: flex;
+    justify-content: center;
+
+  }
+
+}

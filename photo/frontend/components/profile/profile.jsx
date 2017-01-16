@@ -120,7 +120,7 @@ class Profile extends React.Component {
         </div>
 
 									<div>
-									
+
 										<Modal
 											contentLabel="Modal"
 											style={ModalStyle}

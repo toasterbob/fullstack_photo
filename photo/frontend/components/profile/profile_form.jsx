@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router';
+import {defaultCoverPic, defaultProfilePic} from '../links';
 
 class ProfileForm extends React.Component {
 	constructor(props) {
@@ -37,38 +38,62 @@ class ProfileForm extends React.Component {
   }
 
   render() {
+    let coverPic;
+		if (this.props.profile.cover_photo_url){
+			coverPic = this.props.profile.cover_photo_url;
+		} else {
+			coverPic = defaultCoverPic;
+		}
+
+		let profilePic;
+		if (this.props.profile.profile_pic_url){
+			profilePic = this.props.profile.profile_pic_url;
+		} else {
+			profilePic = defaultProfilePic;
+		}
 
 
 		return (
-      <div>
-          <h3>Update Profile</h3>
+      <div className="profile-form">
+        <div className="cover-photo" style={{backgroundImage: `url('${coverPic}')`, height: "150px", width: "600px"}} >
+          <div className="combo">
+            <div className="camera"></div>
+          <div>&nbsp; Change your cover photo</div>
+          </div>
+        </div>
+        <div className="profile-photo"
+              style={{backgroundImage: `url('${defaultProfilePic}')`,
+              height: "110px", width: "110px", margin: "-55px auto 0px auto"}} >
+              <div className="camera"></div>
+        </div>
+
+          <div className="form-fields">
 
           <form onSubmit={this.handleSubmit}>
-            <label>First Name: &nbsp;
+            <h3>Name</h3>
+            <label>
               <input
                 type="text"
                 value={this.state.first_name}
                 onChange={this.update('first_name')} />
             </label>
-            <br />
-
-            <label>Last Name: &nbsp;
+            &nbsp; &nbsp;
+            <label>
               <input
                 type="text"
                 value={this.state.last_name}
                 onChange={this.update('last_name')} />
             </label>
             <br />
-
-            <label>City: &nbsp;
+            <h3>Location</h3>
+            <label>
               <input
                 type="text"
                 value={this.state.city}
                 onChange={this.update('city')} />
             </label>
-            <br />
-
-            <label>Country: &nbsp;
+            &nbsp; &nbsp;
+            <label>
               <input
                 type="text"
                 value={this.state.country}
@@ -76,40 +101,21 @@ class ProfileForm extends React.Component {
             </label>
             <br />
 
-            <label>Email: &nbsp;
-              <input
-                type="text"
-                value={this.state.email}
-                onChange={this.update('email')} />
-            </label>
-            <br />
 
-            <label>About: &nbsp;
-              <input
-                type="comment"
+          <h3>About</h3>
+          <br/>
+            <label>
+              <textarea
                 value={this.state.bio}
                 onChange={this.update('bio')} />
             </label>
-            <br />
+            <br/><br/>
+            <div className="submitButton">
+              <input type="submit" value="Save" />
+            </div>
 
-            <label>Cover Photo: &nbsp;
-              <input
-                type="text"
-                value={this.state.cover_photo_url}
-                onChange={this.update('cover_photo_url')} />
-            </label>
-            <br />
-
-            <label>Profile Pic: &nbsp;
-              <input
-                type="text"
-                value={this.state.profile_pic_url}
-                onChange={this.update('profile_pic_url')} />
-            </label>
-            <br />
-            <input type="submit" value="Update Profile" />
           </form>
-
+          </div>
       </div>
     );
   }
