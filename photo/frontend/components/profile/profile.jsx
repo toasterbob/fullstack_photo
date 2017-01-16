@@ -119,7 +119,7 @@ class Profile extends React.Component {
 
 		let someButton;
 		if (this.props.params.id) {
-			someButton = "";
+			someButton = <button>&nbsp; &nbsp; Follow &nbsp; &nbsp; </button>;;
 		} else {
 			someButton = <button onClick={this.openModal}>Edit your profile</button>;
 		}
