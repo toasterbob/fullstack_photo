@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: dseky3p5e
+  api_key: '174948698243426'
+  api_secret: BFHcgrTEtHGhBdaEuYS3q4Fk4s8
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: dseky3p5e
+  api_key: '174948698243426'
+  api_secret: BFHcgrTEtHGhBdaEuYS3q4Fk4s8
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: dseky3p5e
+  api_key: '174948698243426'
+  api_secret: BFHcgrTEtHGhBdaEuYS3q4Fk4s8
+  enhance_image_tag: true
+  static_image_support: false

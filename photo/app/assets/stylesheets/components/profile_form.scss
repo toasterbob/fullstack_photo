@@ -45,6 +45,10 @@
     display: flex;
     align-items: center;
   }
+  .combo:hover {
+    opacity: .5;
+    cursor: pointer;
+  }
 
   .camera {
     background-image: url("http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_21/v1484520811/camera2_mqshxv.png");
@@ -53,6 +57,7 @@
   }
   .camera:hover {
     opacity: .5;
+    cursor: pointer;
   }
 
   h3 {
