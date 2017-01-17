@@ -17,7 +17,7 @@ const ModalStyle = {
     borderRadius          : '3px',
     border                : '0px solid #eff2f7',
     padding               : '0px 0px',
-    backgroundColor       : '#f7faff',
+    backgroundColor       : '#edf2f9',
     width                 : '600px',
     height                : '600px'
   }
