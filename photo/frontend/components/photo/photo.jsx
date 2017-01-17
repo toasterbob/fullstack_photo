@@ -47,9 +47,9 @@ class Photo extends React.Component {
   render() {
 
     return (
-      <div>
-
-            <div className="photoUpload" onClick={this.openModal}>Upload</div>
+      <div className="photo-header" onClick={this.openModal}>
+            <div className="upload-icon"></div>
+            <div className="upload-text" >&nbsp; Upload</div>
 
 
             <Modal
