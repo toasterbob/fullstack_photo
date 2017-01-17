@@ -7,7 +7,7 @@ class Photo extends React.Component {
 		super(props);
 		this.state = {
       description: '',
-      photo_url: '',
+      photo_url: 'http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_500/v1484683909/preview_zwqsko.png',
 			modalOpen: false
 		};
 		this.openModal = this.openModal.bind(this);
@@ -57,28 +57,32 @@ class Photo extends React.Component {
               style={ModalStyle}
               isOpen={this.state.modalOpen}
               onRequestClose={this.closeModal}>
-              <div onClick={this.photoWidget}>UPLOAD YOUR PHOTO! </div>
-                <form onSubmit={this.handleSubmit}>
-                  <h3>Name</h3>
 
-                <h3>Journal Entry</h3>
+              <div className="photo-form">
                 <br/>
-                  <label>
-                    <textarea
-                      value={this.state.description}
-                      onChange={this.update('description')} />
-                  </label>
-                  <br/><br/>
-                  <div className="submitButton">
-                    <div>
-                      <button className="modalClose" onClick={this.closeModal}>Cancel</button>
-                    </div>
-                    <div>
-                      <input type="submit" value="Save" />
-                    </div>
-                  </div>
+                <div className="photo-preview" style={{backgroundImage: `url('${this.state.photo_url}')`, height: "275px", width: "500px",
+                  backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundSize: "contain" }}></div>
+                <button onClick={this.photoWidget}> UPLOAD YOUR PHOTO </button>
+                  <form onSubmit={this.handleSubmit}>
 
-                </form>
+                  <h3>Photo Journal Entry</h3>
+                  <br/>
+                    <label>
+                      <textarea
+                        value={this.state.description}
+                        onChange={this.update('description')} />
+                    </label>
+                    <br/><br/>
+                    <div className="submitButton">
+                      <div>
+                        <button className="modalClose" onClick={this.closeModal}>Cancel</button>
+                      </div>
+                      <div>
+                        <input type="submit" value="Save" />
+                      </div>
+                    </div>
+                  </form>
+                </div>
             </Modal>
 
       </div>
