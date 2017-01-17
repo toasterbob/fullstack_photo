@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, hashHistory } from 'react-router';
+import PhotoContainer from '../photo/photo_container';
 
 const loginButton = e => {
   e.preventDefault();
@@ -39,6 +40,7 @@ const personalHeader = (currentUser, logout) => (
     </div>
     <div className="header-greet" >
       Welcome, {currentUser.username} &nbsp;
+      <PhotoContainer />
       <button className="header-button" onClick={logout}>Log Out</button>
     </div>
   </div>

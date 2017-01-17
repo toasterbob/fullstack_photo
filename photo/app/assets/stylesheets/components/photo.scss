@@ -1,0 +1,26 @@
+
+.photo-header {
+
+  display: flex;
+  align-items: center;
+  width: 100px;
+  height: 25px;
+
+
+  .upload-icon {
+    background-image: url("http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_18/v1484673402/cloud-upload_uatu3q.png");
+    height: 18px;
+    width: 18px;
+  }
+
+  .upload-text {
+    color: #469eca;
+    font-size: 16px;
+    text-transform: none;
+  }
+
+}
+
+.photo-header:hover {
+  opacity: .7;
+}
