@@ -7,6 +7,7 @@
   height: 25px;
 
 
+
   .upload-icon {
     background-image: url("http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_18/v1484673402/cloud-upload_uatu3q.png");
     height: 18px;
@@ -19,8 +20,103 @@
     text-transform: none;
   }
 
+
 }
 
 .photo-header:hover {
   opacity: .7;
+  cursor: pointer;
+}
+
+.photo-form {
+
+
+  align-items: center;
+
+  .photo-preview {
+
+  }
+
+  input[type=submit] {
+
+    border-radius: 5px;
+    width: 70px;
+    background-color: #1ec93d;
+    box-shadow: 0px;
+    padding: 10px 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+  }
+
+  input[type=submit]:hover {
+    opacity: .6;
+  }
+
+  button {
+    border: 1px #0288cb;
+    border-radius: 4px;
+    background-color: #089ae2;
+    box-shadow: 1px;
+    padding: 8px 15px;
+    font-size: 14px;
+    font-family: sans-serif;
+    margin-right: 10px;
+    margin-top: 6px;
+  }
+
+  .modalClose {
+    border-radius: 5px;
+    width: 70px;
+    background-color: #089ae2;
+    box-shadow: 0px;
+    padding: 10px 5px;
+    font-size: 14px;
+    font-family: sans-serif;
+    color: white;
+    text-align: center;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-top: 3px;
+    margin-bottom: 15px;
+  }
+
+
+  button:hover {
+    background-color: #80cbf7;
+  }
+
+  .submitButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  form {
+    padding: 25px;
+
+    input {
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-top: 3px;
+      margin-bottom: 15px;
+      width: 245px;
+      font-family: sans-serif;
+    }
+
+    textarea {
+      width: 740px;
+      height: 70px;
+      background-color: white;
+      padding-left: 10px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+
+
+    }
+  }
+
 }
