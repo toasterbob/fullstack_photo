@@ -7,7 +7,7 @@ class Photo extends React.Component {
 		super(props);
 		this.state = {
       description: '',
-      photo_url: 'http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_500/v1484683909/preview_zwqsko.png',
+      photo_url: 'http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_546/c_crop,w_500/v1484683909/preview_zwqsko.png',
 			modalOpen: false
 		};
 		this.openModal = this.openModal.bind(this);
@@ -59,10 +59,16 @@ class Photo extends React.Component {
               onRequestClose={this.closeModal}>
 
               <div className="photo-form">
-                <br/>
-                <div className="photo-preview" style={{backgroundImage: `url('${this.state.photo_url}')`, height: "275px", width: "500px",
-                  backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundSize: "contain" }}></div>
-                <button onClick={this.photoWidget}> UPLOAD YOUR PHOTO </button>
+                    <div className="preview">
+                      <div className="photo-preview" style={{backgroundImage: `url('${this.state.photo_url}')`, height: "275px", width: "500px",
+                        backgroundPosition: "center center", backgroundRepeat: "no-repeat", backgroundSize: "contain",
+                        backgroundColor: "#edf2f9"}}></div>
+
+                      <div className="upload-button">
+                        <button className="upload" onClick={this.photoWidget}>&nbsp; &nbsp; Select Your Photo &nbsp; &nbsp;</button>
+                      </div>
+
+                    </div>
                   <form onSubmit={this.handleSubmit}>
 
                   <h3>Photo Journal Entry</h3>

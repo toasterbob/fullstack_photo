@@ -30,11 +30,23 @@
 
 .photo-form {
 
+  h3 {
+    font-family: sans-serif;
+    color: #80cbf7;
+    font-size: 14px;
+  }
 
-  align-items: center;
+  .preview {
+    align-items: center;
+    .upload-button {
+      display: flex;
+      justify-content: center;
+    }
+  }
 
   .photo-preview {
-
+    background-color: #edf2f9;
+    margin: 0 auto;
   }
 
   input[type=submit] {
