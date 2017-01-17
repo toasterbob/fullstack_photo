@@ -1,6 +1,5 @@
 import { connect } from 'react-redux';
-import { logout } from '../../actions/session_actions';
-import Header from './header';
+import Photo from './photo';
 import { uploadPhoto } from '../../actions/photo_actions';
 
 const mapStateToProps = ({ session, photo }) => ({
@@ -9,11 +8,10 @@ const mapStateToProps = ({ session, photo }) => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  logout: () => dispatch(logout()),
-  uploadPhoto: (photo) => dispatch(uploadPhoto(photo))
+  uploadPhoto: (picture) => dispatch(uploadPhoto(picture))
 });
 
 export default connect(
   mapStateToProps,
   mapDispatchToProps
-)(Header);
+)(Photo);

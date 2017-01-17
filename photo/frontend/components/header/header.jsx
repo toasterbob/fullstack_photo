@@ -11,6 +11,8 @@ const signupButton = e => {
   hashHistory.push("/signup");
 };
 
+
+
 const logoLink = "http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142/v1484119573/v8_c5rdfy.png";
 
 const sessionLinks = () => (
@@ -35,7 +37,7 @@ const personalHeader = (currentUser, logout) => (
     <div >
       <img src={logoLink} />
     </div>
-    <div className="header-greet">
+    <div className="header-greet" >
       Welcome, {currentUser.username} &nbsp;
       <button className="header-button" onClick={logout}>Log Out</button>
     </div>
