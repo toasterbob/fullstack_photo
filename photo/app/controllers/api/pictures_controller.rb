@@ -1,7 +1,11 @@
 class Api::PicturesController < ApplicationController
 
   def index
-    @pictures = Picture.all
+    if params[:id]
+      @pictures = User.find(params[:id]).pictures
+    else
+      @pictures = Picture.all
+    end
   end
 
   def user_index

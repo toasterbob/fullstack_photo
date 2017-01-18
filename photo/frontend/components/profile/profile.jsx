@@ -5,6 +5,7 @@ import { hashHistory } from 'react-router';
 import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 import ProfileFormContainer from './profile_form_container';
+import PhotosUserContainer from '../photo/photos_user_container';
 
 class Profile extends React.Component {
 	constructor(props) {
@@ -183,6 +184,9 @@ class Profile extends React.Component {
 						<hr/>
           </div>
         </div>
+							<div className="profile-body">
+								<PhotosUserContainer />
+							</div>
 									<div>
 
 										<Modal

@@ -9,8 +9,8 @@ export const uploadPhoto = picture => dispatch => (
       .then(photo => dispatch(receivePhoto(photo)))
 );
 
-export const getAllPhotos = photos => dispatch => (
-  PhotoApiUtil.getAllPhotos(photos)
+export const getAllPhotos = id => dispatch => (
+  PhotoApiUtil.getAllPhotos(id)
       .then(pictures => dispatch(receiveAllPhotos(pictures)))
 );
 
