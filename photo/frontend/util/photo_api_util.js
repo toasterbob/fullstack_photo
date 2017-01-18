@@ -7,11 +7,11 @@ export const uploadPic = (picture) => (
   })
 );
 
-export const getAllPhotos = (photos) => (
+export const getAllPhotos = (id) => (
   $.ajax({
     method: 'GET',
     url: 'api/pictures',
-    data: {photos}
+    data: {id}
   })
 );
 
