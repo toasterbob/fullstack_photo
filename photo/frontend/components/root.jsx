@@ -7,6 +7,7 @@ import ProfileContainer from './profile/profile_container';
 import ProfileFormContainer from './profile/profile_form_container';
 import PhotoContainer from './photo/photo_container';
 import PhotosUserContainer from './photo/photos_user_container';
+import PhotosAllContainer from './photo/photos_all_container';
 
 const Root = ({ store }) => {
 
@@ -34,6 +35,7 @@ const Root = ({ store }) => {
         <Route path="/profile/:id" component={ ProfileContainer } onEnter={_ensureLoggedIn}/>
         <Route path="/photo" component={ PhotoContainer } onEnter={_ensureLoggedIn}/>
         <Route path="/photos" component={ PhotosUserContainer } onEnter={_ensureLoggedIn}/>
+        <Route path="/explore" component={ PhotosAllContainer } onEnter={_ensureLoggedIn}/>
     </Router>
   </Provider>
 );
