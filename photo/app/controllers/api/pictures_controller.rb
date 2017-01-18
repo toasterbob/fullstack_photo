@@ -3,6 +3,7 @@ class Api::PicturesController < ApplicationController
   def index
     if params[:id]
       @pictures = User.find(params[:id]).pictures
+      @pictures.reverse
     else
       @pictures = Picture.all
     end

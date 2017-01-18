@@ -111,7 +111,7 @@ class ProfileForm extends React.Component {
                 onChange={this.update('bio')} />
             </label>
             <br/><br/>
-          
+
             <div className="submitButton">
               <input type="submit" value="Save" />
             </div>

@@ -30,6 +30,15 @@ class Profile extends React.Component {
 	}
 
 	componentWillReceiveProps(newProps) {
+		console.log(newProps.params.id);
+		if (this.props.params.id !== newProps.params.id) {
+			if (newProps.params.id === undefined ) {
+				this.props.getUser(this.props.currentUser.id);
+			} else {
+				this.props.getUser(newProps.params.id);
+			}
+
+		}
     this.setState(newProps.profile);
 		if (newProps.profile.cover_photo_url){
 
@@ -44,11 +53,11 @@ class Profile extends React.Component {
   }
 
 	componentDidMount(){
-		let user = this.props.currentUser;
+		let id = this.props.currentUser.id;
 		if (this.props.params.id) {
-			user.id = this.props.params.id;
+			id = this.props.params.id;
 		}
-		this.props.getUser(user);
+		this.props.getUser(id);
 	}
 
 	openModal() {
