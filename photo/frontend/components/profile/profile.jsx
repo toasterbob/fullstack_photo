@@ -6,6 +6,7 @@ import Modal from 'react-modal';
 import ModalStyle from './modal_style';
 import ProfileFormContainer from './profile_form_container';
 import PhotosUserContainer from '../photo/photos_user_container';
+import FollowButtonContainer from '../follow/follow_button_container';
 
 class Profile extends React.Component {
 	constructor(props) {
@@ -155,14 +156,16 @@ class Profile extends React.Component {
 			hashHistory.push("/profile/edit");
 		};
 
+
+		let userId = this.props.params.id || this.props.currentUser.id;
+
 		let someButton;
 		if (this.props.params.id) {
-			someButton = <button>&nbsp; &nbsp; Follow &nbsp; &nbsp; </button>;;
+			someButton = <FollowButtonContainer userId={userId}/>;
 		} else {
 			someButton = <button onClick={this.openModal}>Edit your profile</button>;
 		}
 
-		let userId = this.props.params.id || this.props.currentUser.id;
 
 
 		return (
