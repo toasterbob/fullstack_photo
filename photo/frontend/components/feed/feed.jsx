@@ -54,7 +54,7 @@ class Feed extends React.Component {
 
 
     return (
-      <div>
+      <div className="feed-main">
         <HeaderContainer />
         <div>
           <div>

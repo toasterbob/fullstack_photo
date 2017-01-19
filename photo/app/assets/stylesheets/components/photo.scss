@@ -4,6 +4,10 @@
   margin: 5px;
 }
 
+.feed-main {
+  background-color: #f4fafc;
+}
+
 .photo-explore {
   max-width: 400px;
   height: auto;
@@ -15,7 +19,7 @@
   max-width: 700px;
   height: auto;
   position: relative;
-  margin: 5px;
+  margin: 10px;
 }
 
 .small-profile {
@@ -36,10 +40,8 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  position: absolute;
   background-color: #edf2f9;
   width: 100%;
-
 }
 
 .photo-feed:hover, .photo-explore:hover {
