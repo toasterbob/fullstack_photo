@@ -4,7 +4,11 @@ class Api::PicturesController < ApplicationController
     if params[:id]
       @pictures = User.find(params[:id]).pictures
     elsif params[:feed]
-      # current_user.follows.pictures 
+      @pictures = []
+      current_user.followings.each do |user|
+        @pictures.concat(user.pictures)
+      end
+      @pictures
     else
       @pictures = Picture.all
     end

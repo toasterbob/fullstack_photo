@@ -3,7 +3,7 @@ import Masonry from 'react-masonry-component';
 import HeaderContainer from '../header/header_container';
 import { Link } from 'react-router';
 
-class PhotosAll extends React.Component {
+class Feed extends React.Component {
 	constructor(props) {
 		super(props);
 
@@ -25,14 +25,14 @@ class PhotosAll extends React.Component {
 
       if (photos[0]){
         return photos.map( (photo, idx) => (
-          <div key={idx} className="photo-explore">
+          <div key={idx} className="photo-feed">
 
               <Link to={`/profile/${photo.user_id}`}>
                   <img src={photo.photo_url} alt={photo.description} />
               </Link>
 
               <Link to={`/profile/${photo.user_id}`}>
-                <div className="author">
+                <div className="author2">
                   <div>
                     <img src={photo.profile_pic_url} className="small-profile" />
                   </div>
@@ -83,4 +83,4 @@ class PhotosAll extends React.Component {
 
   }
 
-  export default PhotosAll;
+  export default Feed;

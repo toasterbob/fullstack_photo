@@ -4,8 +4,15 @@
   margin: 5px;
 }
 
-.photo-feed {
+.photo-explore {
   max-width: 400px;
+  height: auto;
+  position: relative;
+  margin: 5px;
+}
+
+.photo-feed {
+  max-width: 700px;
   height: auto;
   position: relative;
   margin: 5px;
@@ -25,7 +32,17 @@
   display: none;
 }
 
-.photo-feed:hover {
+.author2 {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: absolute;
+  background-color: #edf2f9;
+  width: 100%;
+
+}
+
+.photo-feed:hover, .photo-explore:hover {
   .author {
     display: flex;
     justify-content: flex-start;

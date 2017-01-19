@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
   source: :follower
 
   has_many :following_associations,
-  foreign_key: :followed_id,
+  foreign_key: :follower_id,
   class_name: "Follow"
 
   has_many :followings,
@@ -30,6 +30,10 @@ class User < ActiveRecord::Base
     user = User.find_by(username: username)
     return nil if user.nil?
     user.is_password?(password) ? user : nil
+  end
+
+  def is_followed_by_current_user(user)
+    self.followers.include?(user)
   end
 
   def password= (password)
