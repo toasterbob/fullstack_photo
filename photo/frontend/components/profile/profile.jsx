@@ -194,6 +194,8 @@ class Profile extends React.Component {
 						<h2>{town}, {country}</h2>
 						<br/>
 						<hr/>
+						<h2>PHOTOS</h2>
+						<hr/>
           </div>
         </div>
 							<div className="profile-body">
