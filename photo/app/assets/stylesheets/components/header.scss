@@ -3,11 +3,12 @@
   display: flex;
   justify-content: space-between;
   margin: 5px;
+  background-color: white; 
 
   .header-greet {
     display: flex;
     justify-content: space-between;
-    align-items: center; 
+    align-items: center;
     text-transform: uppercase;
     font-family: sans-serif;
     width: 400px;
