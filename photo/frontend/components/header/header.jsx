@@ -36,7 +36,7 @@ const personalHeader = (currentUser, logout) => (
 
   <div className="header">
     <div >
-      <Link to="/explore">
+      <Link to="/feed">
         <img src={logoLink} />
       </Link>
     </div>

@@ -15,6 +15,14 @@ export const getAllPhotos = (id) => (
   })
 );
 
+export const getFeedPhotos = () => (
+  $.ajax({
+    method: 'GET',
+    url: 'api/pictures',
+    data: {feed: true}
+  })
+);
+
 
 export const getPhoto = (photo) => (
   $.ajax({

@@ -6,3 +6,10 @@ export const followUser = (follow) => (
   		data: {follow}
   	})
 );
+
+export const unfollowUser = (id) => (
+  $.ajax({
+   method: 'DELETE',
+   url: `api/users/${id}/follow`
+ })
+);

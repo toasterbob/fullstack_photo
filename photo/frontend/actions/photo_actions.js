@@ -14,6 +14,11 @@ export const getAllPhotos = id => dispatch => (
       .then(pictures => dispatch(receiveAllPhotos(pictures)))
 );
 
+export const getFeedPhotos = () => dispatch => (
+  PhotoApiUtil.getFeedPhotos()
+      .then(pictures => dispatch(receiveAllPhotos(pictures)))
+);
+
 export const getPhoto = (photo) => dispatch => (
   PhotoApiUtil.getPhoto(photo)
       .then(picture => dispatch(receivePhoto(picture)))

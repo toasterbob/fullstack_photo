@@ -7,6 +7,7 @@ class FollowButton extends React.Component {
 
 
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.unfollowSubmit = this.unfollowSubmit.bind(this);
 	}
 
 
@@ -17,15 +18,24 @@ class FollowButton extends React.Component {
     this.props.followUser(follow);
   }
 
+  unfollowSubmit(e) {
+    let id = this.props.userId;
+    e.preventDefault();
+    this.props.unfollowUser(id);
+  }
+
 
   render() {
-    console.log(this.props.userId);
     let someButton;
-
+    if (this.props.profile.followed) {
+      someButton = <button className="following" onClick={this.unfollowSubmit}>&nbsp; &nbsp; Unfollow &nbsp; &nbsp; </button>;
+    } else {
+       someButton = <button onClick={this.handleSubmit}>&nbsp; &nbsp; Follow &nbsp; &nbsp; </button>;
+    }
 
     return (
       <div>
-          <button onClick={this.handleSubmit}>&nbsp; &nbsp; Follow &nbsp; &nbsp; </button>
+          {someButton}
       </div>
 
 
