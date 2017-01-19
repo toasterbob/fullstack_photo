@@ -11,14 +11,18 @@ class PhotosUser extends React.Component {
 	}
 
   componentWillReceiveProps(newProps) {
+    if (this.props.userId !== newProps.userId) {
+			this.props.getPhotos(newProps.userId);
+		}
+
     this.setState(newProps.photo);
 
   }
 
   componentDidMount() {
-    let user = this.props.currentUser;
 
-    this.props.getPhotos(user.id);
+
+    this.props.getPhotos(this.props.userId);
   }
 
   photoRender() {
@@ -44,7 +48,7 @@ class PhotosUser extends React.Component {
     return (
         <div>
           <div>
-            <div>
+            <div className="center-masonry">
               <Masonry
                 elementType={'div'}
                 disableImagesLoaded={false}

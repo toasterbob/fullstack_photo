@@ -30,16 +30,16 @@ class Profile extends React.Component {
 	}
 
 	componentWillReceiveProps(newProps) {
-		console.log(newProps.params.id);
 		if (this.props.params.id !== newProps.params.id) {
 			if (newProps.params.id === undefined ) {
 				this.props.getUser(this.props.currentUser.id);
 			} else {
 				this.props.getUser(newProps.params.id);
 			}
-
 		}
+
     this.setState(newProps.profile);
+
 		if (newProps.profile.cover_photo_url){
 
 		} else {
@@ -162,6 +162,9 @@ class Profile extends React.Component {
 			someButton = <button onClick={this.openModal}>Edit your profile</button>;
 		}
 
+		let userId = this.props.params.id || this.props.currentUser.id;
+
+
 		return (
       <div>
 
@@ -194,7 +197,7 @@ class Profile extends React.Component {
           </div>
         </div>
 							<div className="profile-body">
-								<PhotosUserContainer />
+								<PhotosUserContainer userId={userId}/>
 							</div>
 									<div>
 

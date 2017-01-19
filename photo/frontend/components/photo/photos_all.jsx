@@ -1,7 +1,7 @@
 import React from 'react';
 import Masonry from 'react-masonry-component';
 import HeaderContainer from '../header/header_container';
-
+import { Link } from 'react-router';
 
 class PhotosAll extends React.Component {
 	constructor(props) {
@@ -24,10 +24,23 @@ class PhotosAll extends React.Component {
       let photos = this.props.photo;
 
       if (photos[0]){
-        photos.reverse();
         return photos.map( (photo, idx) => (
-          <div key={idx} className="photo-feed" >
-            <img src={photo.photo_url}/>
+          <div key={idx} className="photo-feed">
+
+              <Link to={`/profile/${photo.user_id}`}>
+                  <img src={photo.photo_url} alt={photo.description} />
+              </Link>
+
+              <Link to={`/profile/${photo.user_id}`}>
+                <div className="author">
+                  <div>
+                    <img src={photo.profile_pic_url} className="small-profile" />
+                  </div>
+                  <div>
+                    &nbsp; {photo.username}
+                  </div>
+                </div>
+              </Link>
           </div>
         ));
 
@@ -45,7 +58,7 @@ class PhotosAll extends React.Component {
         <HeaderContainer />
         <div>
           <div>
-            <div>
+            <div className="center-masonry">
               <Masonry
                 elementType={'div'}
                 disableImagesLoaded={false}

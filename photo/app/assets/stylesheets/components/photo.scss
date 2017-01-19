@@ -7,7 +7,35 @@
 .photo-feed {
   max-width: 400px;
   height: auto;
+  position: relative;
   margin: 5px;
+}
+
+.small-profile {
+  height: 30px;
+  width: 30px;
+}
+
+.center-masonry {
+  display: flex;
+  justify-content: center;
+}
+
+.author {
+  display: none;
+}
+
+.photo-feed:hover {
+  .author {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: absolute;
+    bottom: 15px;
+    background-color: #edf2f9;
+    width: 100%;
+    opacity: .8;
+  }
 }
 
 
