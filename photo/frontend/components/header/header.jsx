@@ -36,10 +36,13 @@ const personalHeader = (currentUser, logout) => (
 
   <div className="header">
     <div >
-      <img src={logoLink} />
+      <Link to="/explore">
+        <img src={logoLink} />
+      </Link>
     </div>
     <div className="header-greet" >
-      Welcome, {currentUser.username} &nbsp;
+      <Link to={`/profile`}>Welcome, {currentUser.username} &nbsp;</Link>
+
       <PhotoContainer />
       <button className="header-button" onClick={logout}>Log Out</button>
     </div>
