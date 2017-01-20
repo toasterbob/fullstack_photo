@@ -62,16 +62,7 @@ class Journal extends React.Component {
                 </div>
               </div>
 
-              <Link to={`/profile/${photo.user_id}`}>
-                <div className="author2">
-                  <div>
-                    <img src={photo.profile_pic_url} className="small-profile" />
-                  </div>
-                  <div className="photo-author">
-                    &nbsp; {photo.username}
-                  </div>
-                </div>
-              </Link>
+              
               <div className="description">
                 <br/>{photo.description || "UNTITLED"}<br/>
               </div>
