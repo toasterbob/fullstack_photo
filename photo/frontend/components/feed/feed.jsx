@@ -2,12 +2,20 @@ import React from 'react';
 import Masonry from 'react-masonry-component';
 import HeaderContainer from '../header/header_container';
 import { Link } from 'react-router';
+import Modal from 'react-modal';
+import ModalStyle2 from '../photo/modal_style2';
 
 class Feed extends React.Component {
 	constructor(props) {
 		super(props);
-
+		this.state = {
+			modalOpen: false,
+			image_url: ""
+		};
     this.photoRender = this.photoRender.bind(this);
+		this.openModal = this.openModal.bind(this);
+		this.closeModal = this.closeModal.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 	}
 
   componentWillReceiveProps(newProps) {
@@ -20,6 +28,20 @@ class Feed extends React.Component {
     this.props.getPhotos();
   }
 
+	openModal() {
+		this.setState({modalOpen: true});
+	}
+
+	closeModal() {
+		this.setState({modalOpen: false});
+	}
+
+	handleClick(photo) {
+
+		this.setState({image_url: photo.photo_url}) ;
+		this.setState({ modalOpen: true });
+	}
+
   photoRender() {
       let photos = this.props.photo;
 
@@ -30,9 +52,9 @@ class Feed extends React.Component {
             <div className="frame">
               <div className="pic-holder">
                 <div className="pic">
-                  <Link to={`/profile/${photo.user_id}`}>
-                    <img src={photo.photo_url} alt={photo.description} />
-                  </Link>
+									<div onClick={() => this.handleClick(photo)}>
+		                  <img src={photo.photo_url} alt={photo.description} />
+		              </div>
                 </div>
               </div>
 
@@ -66,6 +88,18 @@ class Feed extends React.Component {
       <div className="feed-main">
         <HeaderContainer />
         <div>
+					<Modal
+						contentLabel="Modal"
+						style={ModalStyle2}
+						isOpen={this.state.modalOpen}
+						onRequestClose={this.closeModal}>
+						<div className="modal-body">
+							<img src={this.state.image_url}/>
+							<div className="close-button">
+								<button onClick={this.closeModal}>Close</button>
+							</div>
+						</div>
+					</Modal>
           <div className="intro">
             <br/>
             <h2>Welcome to your feed.  Follow more people to see their photos.</h2>
