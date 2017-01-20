@@ -95,7 +95,7 @@ Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1
 Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484899519/t1jcofzcfg0brev2piev.jpg", user_id: 8, description: "UNTITLED")
 Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484904028/cbpvt1k0u1etubgbauto.jpg", user_id: 1, description: "Infinite wells")
 Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484723430/d2u5qmcfaiwjtjntonon.jpg", user_id: 4, description: "UNTITLED")
-Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484904028/cbpvt1k0u1etubgbauto.jpg", user_id: 6, description: "Bravery")
+Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484911750/zzspzoiwma6fibim1s8q.jpg", user_id: 6, description: "Bravery")
 Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484899684/fgxxyxm1fz1ic7utuuai.jpg", user_id: 8, description: "UNTITLED")
 Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484723509/vyukj086iyhb5o7ihm7h.jpg", user_id: 4, description: "UNTITLED")
 Picture.create!(photo_url: "https://res.cloudinary.com/dseky3p5e/image/upload/v1484904283/vycyqbpyyhhyblyxh5cn.jpg", user_id: 6, description: "Inspired will")

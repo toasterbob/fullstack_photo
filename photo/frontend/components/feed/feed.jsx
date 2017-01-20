@@ -47,7 +47,7 @@ class Feed extends React.Component {
                 </div>
               </Link>
               <div className="description">
-                <br/>{photo.description || "Untitled"}<br/>
+                <br/>{photo.description || "UNTITLED"}<br/>
               </div>
             </div>
           </div>
