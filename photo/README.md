@@ -92,11 +92,14 @@ All of the React components, store, actions, reducers, etc... are stored in the 
 ### React-Masonry-Component and React-Modal are utilized for displaying and uploading photos.  
 
 ### Babel
+
 Babel was used to transpile the jsx into vanilla Javascript.  
 
 
 
 ## Future Implementations
+
+Future implementations will build out the ability to edit and delete photos and journal entries.  
 
 
 [photo-journal-logo]: http://res.cloudinary.com/dseky3p5e/image/upload/v1484119573/v8_c5rdfy.png
