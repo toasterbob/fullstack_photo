@@ -11,6 +11,7 @@ import PhotosAllContainer from './photo/photos_all_container';
 import FollowButtonContainer from './follow/follow_button_container';
 import FeedContainer from './feed/feed_container';
 import AboutContainer from './profile/about_container';
+import JournalContainer from './profile/journal_container';
 
 const Root = ({ store }) => {
 
@@ -42,6 +43,7 @@ const Root = ({ store }) => {
         <Route path="/follow" component={ FollowButtonContainer } onEnter={_ensureLoggedIn}/>
         <Route path="/feed" component={ FeedContainer } onEnter={_ensureLoggedIn}/>
         <Route path="/about" component={ AboutContainer } onEnter={_ensureLoggedIn}/>
+        <Route path="/journal" component={ JournalContainer } onEnter={_ensureLoggedIn}/>
     </Router>
   </Provider>
 );

@@ -7,6 +7,8 @@ import ModalStyle from './modal_style';
 import ProfileFormContainer from './profile_form_container';
 import PhotosUserContainer from '../photo/photos_user_container';
 import FollowButtonContainer from '../follow/follow_button_container';
+import JournalContainer from './journal_container';
+
 
 class Profile extends React.Component {
 	constructor(props) {
@@ -21,11 +23,15 @@ class Profile extends React.Component {
       cover_photo_url: '',
       profile_pic_url: '',
 			modalOpen: false,
-			idPresent: false
+			idPresent: false,
+			layout: "photos"
 		};
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
 		this.handleSubmit = this.handleSubmit.bind(this);
+		this.handleJournal = this.handleJournal.bind(this);
+		this.handlePhotos = this.handlePhotos.bind(this);
+		this.handleAbout = this.handleAbout.bind(this);
 		this.coverPhotoWidget = this.coverPhotoWidget.bind(this);
 		this.profilePhotoWidget = this.profilePhotoWidget.bind(this);
 	}
@@ -73,6 +79,21 @@ class Profile extends React.Component {
     e.preventDefault();
     this.props.updateUser(this.state);
     this.closeModal();
+  }
+
+	handleJournal(e) {
+    e.preventDefault();
+    this.setState({layout: "journal"});
+  }
+
+	handleAbout(e) {
+		e.preventDefault();
+		this.setState({layout: "about"});
+	}
+
+	handlePhotos(e) {
+    e.preventDefault();
+    this.setState({layout: "photos"});
   }
 
 	update(field) {
@@ -166,7 +187,14 @@ class Profile extends React.Component {
 			someButton = <button onClick={this.openModal}>Edit your profile</button>;
 		}
 
-
+		let photoLayout;
+		if (this.state.layout === "photos") {
+			photoLayout = <PhotosUserContainer userId={userId}/>;
+		} else if (this.state.layout === "journal") {
+			photoLayout = <JournalContainer userId={userId}/>;
+		} else if (this.state.layout === "about") {
+			photoLayout = <div className="bio"><h4>About: {bio}</h4></div>;
+		}
 
 		return (
       <div>
@@ -195,17 +223,24 @@ class Profile extends React.Component {
             <h1>{firstName} {lastName}</h1>
 						<br/>
 						<h2>{town}, {country}</h2>
-						<br/>
-						<hr/>
-						<h3>PHOTOS &nbsp;&nbsp;
 
-							<a href="/?#/about">ABOUT</a>
-						</h3>
+						<hr/>
+						<div className="profile-menu">
+							<h3>
+								<div onClick={this.handlePhotos}>Photos &nbsp; &nbsp;</div>
+							</h3>
+							<h3>
+								<div onClick={this.handleAbout}>About &nbsp; &nbsp;</div>
+							</h3>
+							<h3>
+								<div onClick={this.handleJournal}>Journal</div>
+							</h3>
+						</div>
 						<hr/>
           </div>
         </div>
 							<div className="profile-body">
-								<PhotosUserContainer userId={userId}/>
+								{photoLayout}
 							</div>
 									<div>
 

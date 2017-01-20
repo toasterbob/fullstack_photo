@@ -49,6 +49,10 @@
         color: #060258;
       }
     }
+    h3:hover {
+      opacity: .8;
+      cursor: pointer;
+    }
   }
 }
 
@@ -59,4 +63,9 @@
     font-size: 30px;
   }
 
+}
+
+.profile-menu {
+  display: flex;
+  justify-content: center;
 }
