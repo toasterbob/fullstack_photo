@@ -57,6 +57,11 @@ class PhotosAll extends React.Component {
       <div>
         <HeaderContainer />
         <div className="explore-main">
+					<div className="intro">
+            <br/>
+            <h2>Explore the latest photos.  You can follow your favorites.</h2>
+            <br/>
+          </div>
           <div>
             <div className="center-masonry">
               <Masonry
