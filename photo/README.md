@@ -14,6 +14,27 @@
 Photo Journal has a secure login system
 ![login]
 
+Each user has a profile page
+![profile]
+
+They can edit their information and upload profile pictures, cover photos. 
+![edit]
+
+Explore let's you see the latest photos from other users
+![explore]
+
+Follow your favorites
+![follow]
+
+The people you follow show up in your feed
+![feed]
+
+Your photos and other users can be viewed on your profile page in photo mode
+![photos]
+
+It can also be viewed in journal mode
+![journal]
+
 
 ## Project Design
 
@@ -30,7 +51,14 @@ A [database schema][schema] was prepared alongside the design proposal.
 
 [photo-journal-logo]: http://res.cloudinary.com/dseky3p5e/image/upload/v1484119573/v8_c5rdfy.png
 [splash page]: ./docs/images/Splash.png "Photo Journal splash page"
-[login]: ./docs/images/login.png "Photo Journal splash page"
+[login]: ./docs/images/login.png
+[profile]: ./docs/images/profile.png
+[edit]: ./docs/images/edit.png
+[explore]: ./docs/images/explore.png
+[follow]: ./docs/images/follow.png
+[feed]: ./docs/images/feed.png
+[photos]: ./docs/images/photos.png
+[journal]: ./docs/images/journal.png
 [proposal]: ./docs/README.md
 [schema]: ./docs/schema.md
 [wireframes]: ./docs/wireframes
