@@ -72,13 +72,27 @@ PostgreSQL RDBMS
 
 ##Frontend  
 
-###
+###npm
 
-###Dependencies
+NodeJS package manager was utilized to install all of the frontend node programs.  npm makes it easier to specify and link dependencies.
 
-- React-Masonry-Component and React-Modal are utilized for displaying and uploading photos.  
+###Webpack
+
+Webpack was utilized to bundle all of the assets, including Javascript, images, fonts, and CSS.  
+
+###jQuery
+
+jQuery was utilized to make AJAX requests to the Rails server.  
+
+###React
+
+All of the React components, store, actions, reducers, etc... are stored in the frontend directory.  
 
 
+### React-Masonry-Component and React-Modal are utilized for displaying and uploading photos.  
+
+### Babel
+Babel was used to transpile the jsx into vanilla Javascript.  
 
 
 
