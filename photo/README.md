@@ -53,21 +53,36 @@ A [database schema][schema] was prepared alongside the design proposal.
 
 Photo Journal is a single-page application built using Rails and React/Redux.  
 
+##Backend
+
 ###Heroku
 
 Heroku is used as for hosting and managing the app.  
 
-## Database
+### Database
 
 PostgreSQL RDBMS
 
 ###Dependencies
-- Photo Journal utilizes Cloudinary for hosting and transforming photos.  Profile pics are transformed utilizing Clodinary's editing tools when they are uploaded and stored in the new form. Faces are identified utilizing these tools and then the photos are cropped in a circular fashion.  Cover photos are also cropped into longer images.  Regular photos are left in their original form.  
-
-- React-Masonry-Component and React-Modal are utilized for displaying and uploading photos.  
 
 - BCrypt is used to salt the password and hash it.  
 
+- Photo Journal utilizes Cloudinary for hosting and transforming photos, so frontend/backend.  Profile pics are transformed utilizing Clodinary's editing tools when they are uploaded and stored in the new form. Faces are identified utilizing these tools and then the photos are cropped in a circular fashion.  Cover photos are also cropped into longer images.  Regular photos are left in their original form.  
+
+
+##Frontend  
+
+###
+
+###Dependencies
+
+- React-Masonry-Component and React-Modal are utilized for displaying and uploading photos.  
+
+
+
+
+
+## Future Implementations
 
 
 [photo-journal-logo]: http://res.cloudinary.com/dseky3p5e/image/upload/v1484119573/v8_c5rdfy.png
