@@ -48,6 +48,13 @@
   margin-left: 15px;
 }
 
+.description {
+  padding-bottom: 15px;
+  text-align: center;
+  border: 1px solid #e1e9ed;
+  font-family: 'Nothing You Could Do', cursive;
+}
+
 .photo-author {
   font-family: sans-serif;
 }
@@ -68,7 +75,7 @@
   background-color: white;
   width: 100%;
   height: 50px;
-  // border: 1px solid #e1e9ed;
+  //
 }
 
 .photo-feed:hover, .photo-explore:hover {

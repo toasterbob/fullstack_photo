@@ -25,6 +25,7 @@ class Feed extends React.Component {
 
       if (photos[0]){
         return photos.map( (photo, idx) => (
+
           <div key={idx} className="photo-feed">
             <div className="frame">
               <div className="pic-holder">
@@ -45,7 +46,9 @@ class Feed extends React.Component {
                   </div>
                 </div>
               </Link>
-
+              <div className="description">
+                <br/>{photo.description || "Untitled"}<br/>
+              </div>
             </div>
           </div>
         ));

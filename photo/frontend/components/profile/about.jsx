@@ -8,7 +8,7 @@ import ProfileFormContainer from './profile_form_container';
 import PhotosUserContainer from '../photo/photos_user_container';
 import FollowButtonContainer from '../follow/follow_button_container';
 
-class Profile extends React.Component {
+class About extends React.Component {
 	constructor(props) {
 		super(props);
 		this.state = {
@@ -197,15 +197,15 @@ class Profile extends React.Component {
 						<h2>{town}, {country}</h2>
 						<br/>
 						<hr/>
-						<h3>PHOTOS &nbsp;&nbsp;
+						<h3><a href="/?#/profile">PHOTOS</a> &nbsp;&nbsp;
 
-							<a href="/?#/about">ABOUT</a>
+							ABOUT
 						</h3>
 						<hr/>
           </div>
         </div>
-							<div className="profile-body">
-								<PhotosUserContainer userId={userId}/>
+							<div className="bio">
+								<h4>About: {bio}</h4>
 							</div>
 									<div>
 
@@ -291,4 +291,4 @@ class Profile extends React.Component {
   }
 }
 
-export default Profile;
+export default About;
