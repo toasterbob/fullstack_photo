@@ -35,13 +35,18 @@ const sessionLinks = () => (
 const personalHeader = (currentUser, logout) => (
 
   <div className="header">
-    <div >
-      <Link to="/feed">
-        <img src={logoLink} />
-      </Link>
+    <div className="left-header">
+      <div>
+        <Link to="/feed"><img src={logoLink} /></Link>
+      </div>
+      <div className="explore">
+        <Link to="/explore">&nbsp; Explore</Link>
+      </div>
     </div>
     <div className="header-greet" >
-      <Link to={`/profile`}>Welcome, {currentUser.username} &nbsp;</Link>
+      <div className="username">
+        <Link to={`/profile`}>Welcome, {currentUser.username} &nbsp;</Link>
+      </div>
 
       <PhotoContainer />
       <button className="header-button" onClick={logout}>Log Out</button>

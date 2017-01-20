@@ -3,7 +3,16 @@
   display: flex;
   justify-content: space-between;
   margin: 5px;
-  background-color: white; 
+  background-color: white;
+
+  .left-header {
+    display: flex;
+    align-items: center;
+
+    .explore {
+      font-family: fantasy;
+    }
+  }
 
   .header-greet {
     display: flex;
@@ -12,6 +21,11 @@
     text-transform: uppercase;
     font-family: sans-serif;
     width: 400px;
+
+    // .username {
+    //   font-family: fantasy;
+    //   align-items: center;
+    // }
   }
 
   img:hover {
