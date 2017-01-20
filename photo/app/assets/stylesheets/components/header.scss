@@ -2,12 +2,15 @@
 .header{
   display: flex;
   justify-content: space-between;
-  margin: 5px;
+
   background-color: white;
 
   .left-header {
     display: flex;
     align-items: center;
+    margin-left: 5px; 
+    .logo {
+    }
 
     .explore {
       font-family: fantasy;
@@ -20,7 +23,7 @@
     align-items: center;
     text-transform: uppercase;
     font-family: sans-serif;
-    width: 400px;
+    width: 370px;
 
     // .username {
     //   font-family: fantasy;
@@ -38,7 +41,7 @@ button {
   padding: 10px 20px;
   font-size: 12px;
   text-decoration: none;
-  margin: 5px;
+  margin: 10px;
   color: #fff;
   position: relative;
   display: inline-block;
