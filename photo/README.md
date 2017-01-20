@@ -18,6 +18,7 @@ Photo Journal was designed and built in two weeks.
 A [proposal][proposal] was drafted to help provide an implementation timeline during the development process.
 
 A [database schema][schema] was prepared alongside the design proposal.
+
 [wireframes][Wireframes] were drafted to outline the basic design.  
 
 [photo-journal-logo]: http://res.cloudinary.com/dseky3p5e/image/upload/v1484119573/v8_c5rdfy.png
