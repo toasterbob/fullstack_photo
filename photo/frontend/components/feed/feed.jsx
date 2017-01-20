@@ -63,6 +63,11 @@ class Feed extends React.Component {
       <div className="feed-main">
         <HeaderContainer />
         <div>
+          <div className="intro">
+            <br/>
+            <h2>Welcome to your feed.  Follow more people to see their photos.</h2>
+            <br/>
+          </div>
           <div>
             <div className="center-masonry">
               <Masonry
