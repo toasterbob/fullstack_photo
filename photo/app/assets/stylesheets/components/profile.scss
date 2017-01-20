@@ -2,6 +2,7 @@
 .profile {
 
 
+
   .edit-profile {
     display: flex;
     justify-content: flex-end;
@@ -35,18 +36,27 @@
     h2 {
       color: #060258;
     }
-  }
+    h3 {
+      font-family: 'Abril Fatface', cursive;
+      color: #469eca;
+      font-weight: bolder;
 
-  // .profile-modal {
-  //   position: fixed;
-  //   top: calc(50% - 250px);
-  //   left: calc(50% - 200px);
-  //   width: 400px;
-  //   height: 500px;
-  //   border: 1px solid black;
-  //   border-radius: 15px;
-  //   background-color: white;
-  //   box-shadow: 5px 5px gray;
-  // }
+      a {
+        color: black;
+
+      }
+      a:hover {
+        color: #060258;
+      }
+    }
+  }
+}
+
+.bio {
+  text-align: center;
+  h4 {
+    font-family: 'Nothing You Could Do', cursive;
+    font-size: 30px;
+  }
 
 }
