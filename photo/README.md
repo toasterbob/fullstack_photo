@@ -11,28 +11,28 @@
 
 ##Features
 
-Photo Journal has a secure login system
+Photo Journal has a secure login system.
 ![login]
 
-Each user has a profile page
+Each user has a profile page.
 ![profile]
 
-They can edit their information and upload profile pictures, cover photos. 
+They can edit their information and upload profile pictures, cover photos.
 ![edit]
 
-Explore let's you see the latest photos from other users
+Explore let's you see the latest photos from other users.
 ![explore]
 
-Follow your favorites
+Follow your favorites.
 ![follow]
 
-The people you follow show up in your feed
+The people you follow show up in your feed.
 ![feed]
 
-Your photos and other users can be viewed on your profile page in photo mode
+Your photos and other users can be viewed on your profile page in photo mode.
 ![photos]
 
-It can also be viewed in journal mode
+It can also be viewed in journal mode.
 ![journal]
 
 
@@ -47,6 +47,27 @@ A [database schema][schema] was prepared alongside the design proposal.
 [Wireframes][wireframes] were drafted to outline the basic design.  
 
 ![wireframe sample]
+
+
+##Implementation
+
+Photo Journal is a single-page application built using Rails and React/Redux.  
+
+###Heroku
+
+Heroku is used as for hosting and managing the app.  
+
+## Database
+
+PostgreSQL RDBMS
+
+###Dependencies
+- Photo Journal utilizes Cloudinary for hosting and transforming photos.  Profile pics are transformed utilizing Clodinary's editing tools when they are uploaded and stored in the new form. Faces are identified utilizing these tools and then the photos are cropped in a circular fashion.  Cover photos are also cropped into longer images.  Regular photos are left in their original form.  
+
+- React-Masonry-Component and React-Modal are utilized for displaying and uploading photos.  
+
+- BCrypt is used to salt the password and hash it.  
+
 
 
 [photo-journal-logo]: http://res.cloudinary.com/dseky3p5e/image/upload/v1484119573/v8_c5rdfy.png
