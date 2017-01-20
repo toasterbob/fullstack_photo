@@ -18,10 +18,12 @@ const logoLink = "http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_142
 
 const sessionLinks = () => (
   <div className="header">
-    <div>
-      <a href="/">
-        <img src={logoLink} />
-      </a>
+    <div className="left-header">
+      <div className="logo">
+        <a href="/">
+          <img src={logoLink} />
+        </a>
+      </div>
     </div>
     <div>
       <nav className="login-signup">
@@ -41,6 +43,12 @@ const personalHeader = (currentUser, logout) => (
       </div>
       <div className="explore">
         <Link to="/explore">&nbsp; Explore</Link>
+      </div>
+      <div className="feed">
+        <Link to="/feed">&nbsp; &nbsp; Feed</Link>
+      </div>
+      <div className="profile">
+        <Link to="/profile">&nbsp; &nbsp;&nbsp; Profile</Link>
       </div>
     </div>
     <div className="header-greet" >

@@ -56,7 +56,7 @@ class PhotosAll extends React.Component {
     return (
       <div>
         <HeaderContainer />
-        <div>
+        <div className="explore-main">
           <div>
             <div className="center-masonry">
               <Masonry

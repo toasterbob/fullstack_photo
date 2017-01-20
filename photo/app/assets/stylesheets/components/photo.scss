@@ -8,23 +8,48 @@
   background-color: #eff7f9;
 }
 
+.explore-main {
+  background-color: #eff7f9;
+}
+
+.frame {
+  width: 750px;
+  background-color: white;
+  padding-top: 20px;
+}
+
+.pic-holder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.pic {
+  max-width: 700px;
+  height: auto;
+}
+
 .photo-explore {
   max-width: 400px;
   height: auto;
-  position: relative;
+  position: absolute;
   margin: 5px;
+
 }
 
 .photo-feed {
-  max-width: 700px;
-  height: auto;
-  position: relative;
-  margin: 10px;
+
+  margin: 15px;
 }
 
 .small-profile {
   height: 30px;
   width: 30px;
+  margin-left: 15px;
+}
+
+.photo-author {
+  font-family: sans-serif;
 }
 
 .center-masonry {
@@ -40,8 +65,10 @@
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  background-color: #edf2f9;
+  background-color: white;
   width: 100%;
+  height: 50px;
+  // border: 1px solid #e1e9ed;
 }
 
 .photo-feed:hover, .photo-explore:hover {
