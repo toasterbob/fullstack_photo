@@ -18,7 +18,7 @@ const ModalStyle2 = {
     border                : '0px solid #eff2f7',
     padding               : '0px 0px',
     backgroundColor       : '#edf2f9',
-    width                 : '90%',
+    width                 : '900px',
     height                : 'auto'
   }
 };

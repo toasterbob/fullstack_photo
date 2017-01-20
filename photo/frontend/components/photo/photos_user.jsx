@@ -8,12 +8,14 @@ class PhotosUser extends React.Component {
 	constructor(props) {
 		super(props);
     this.state = {
-			modalOpen: false
+			modalOpen: false,
+			image_url: ""
 		};
 
     this.photoRender = this.photoRender.bind(this);
     this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
+		this.handleClick = this.handleClick.bind(this);
 	}
 
   componentWillReceiveProps(newProps) {
@@ -31,6 +33,20 @@ class PhotosUser extends React.Component {
     this.props.getPhotos(this.props.userId);
   }
 
+	openModal() {
+		this.setState({modalOpen: true});
+	}
+
+	closeModal() {
+		this.setState({modalOpen: false});
+	}
+
+	handleClick(photo) {
+
+    this.setState({image_url: photo.photo_url}) ;
+    this.setState({ modalOpen: true });
+  }
+
   photoRender() {
       let photos = this.props.photo;
 
@@ -38,19 +54,10 @@ class PhotosUser extends React.Component {
 
         return photos.map( (photo, idx) => (
           <div key={idx} className="photos" >
-            <div onClick={this.openModal}>
+            <div onClick={() => this.handleClick(photo)}>
               <img src={photo.photo_url}/>
             </div>
-            <Modal
-              contentLabel="Modal"
-              style={ModalStyle2}
-              isOpen={this.state.modalOpen}
-              onRequestClose={this.closeModal}>
-              <div className="modal-body">
-                <img src={photo.photo_url}/>
-                <button onClick={this.closeModal}>Close</button>
-              </div>
-            </Modal>
+
           </div>
         ));
 
@@ -58,14 +65,7 @@ class PhotosUser extends React.Component {
 
     }
 
-    openModal() {
-      
-  		this.setState({modalOpen: true});
-  	}
 
-  	closeModal() {
-  		this.setState({modalOpen: false});
-  	}
 
 
   render() {
@@ -74,6 +74,18 @@ class PhotosUser extends React.Component {
     return (
         <div>
           <div>
+						<Modal
+              contentLabel="Modal"
+              style={ModalStyle2}
+              isOpen={this.state.modalOpen}
+              onRequestClose={this.closeModal}>
+              <div className="modal-body">
+                <img src={this.state.image_url}/>
+								<div className="close-button">
+									<button onClick={this.closeModal}>Close</button>
+								</div>
+              </div>
+            </Modal>
             <div className="center-masonry">
 
               <Masonry

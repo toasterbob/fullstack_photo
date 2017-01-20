@@ -1,7 +1,20 @@
+.modal-body {
+
+  .close-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
 .photos {
   max-width: 300px;
   height: auto;
   margin: 5px;
+}
+.photos:hover {
+  opacity: .75;
+  cursor: pointer;
 }
 
 .feed-main {
