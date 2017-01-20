@@ -8,12 +8,15 @@
   .left-header {
     display: flex;
     align-items: center;
-    margin-left: 5px; 
+    margin-left: 5px;
     .logo {
     }
 
-    .explore {
+    .explore, .feed, .profile {
       font-family: fantasy;
+    }
+    .explore:hover, .feed:hover, .profile:hover {
+      color: #469eca;
     }
   }
 

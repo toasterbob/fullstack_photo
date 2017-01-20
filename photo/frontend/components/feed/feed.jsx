@@ -26,21 +26,27 @@ class Feed extends React.Component {
       if (photos[0]){
         return photos.map( (photo, idx) => (
           <div key={idx} className="photo-feed">
-
-              <Link to={`/profile/${photo.user_id}`}>
-                  <img src={photo.photo_url} alt={photo.description} />
-              </Link>
+            <div className="frame">
+              <div className="pic-holder">
+                <div className="pic">
+                  <Link to={`/profile/${photo.user_id}`}>
+                    <img src={photo.photo_url} alt={photo.description} />
+                  </Link>
+                </div>
+              </div>
 
               <Link to={`/profile/${photo.user_id}`}>
                 <div className="author2">
                   <div>
                     <img src={photo.profile_pic_url} className="small-profile" />
                   </div>
-                  <div>
+                  <div className="photo-author">
                     &nbsp; {photo.username}
                   </div>
                 </div>
               </Link>
+
+            </div>
           </div>
         ));
 
