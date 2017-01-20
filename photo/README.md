@@ -11,6 +11,10 @@
 
 ##Features
 
+Photo Journal has a secure login system
+![login]
+
+
 ## Project Design
 
 Photo Journal was designed and built in two weeks.
@@ -26,6 +30,7 @@ A [database schema][schema] was prepared alongside the design proposal.
 
 [photo-journal-logo]: http://res.cloudinary.com/dseky3p5e/image/upload/v1484119573/v8_c5rdfy.png
 [splash page]: ./docs/images/Splash.png "Photo Journal splash page"
+[login]: ./docs/images/login.png "Photo Journal splash page"
 [proposal]: ./docs/README.md
 [schema]: ./docs/schema.md
 [wireframes]: ./docs/wireframes
