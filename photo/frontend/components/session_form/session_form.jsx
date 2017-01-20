@@ -13,10 +13,12 @@ class SessionForm extends React.Component {
 	componentWillReceiveProps(newState) {
     if (newState.formType != this.props.formType) {
       this.setState({ username: "", password: "" });
+			this.props.receiveErrors();
     }
   }
 
 	componentDidUpdate() {
+
 		this.redirectIfLoggedIn();
 	}
 
