@@ -27,6 +27,7 @@ class Photo extends React.Component {
   handleSubmit(e) {
     e.preventDefault();
     this.props.uploadPhoto(this.state);
+		this.setState({photo_url: 'http://res.cloudinary.com/dseky3p5e/image/upload/c_scale,w_546/c_crop,w_500/v1484683909/preview_zwqsko.png'});
     this.closeModal();
   }
 
