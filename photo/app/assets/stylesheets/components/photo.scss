@@ -47,7 +47,9 @@
   height: auto;
   position: absolute;
   margin: 5px;
-
+}
+.photo-explore:hover {
+  cursor: pointer;
 }
 
 .photo-feed {
