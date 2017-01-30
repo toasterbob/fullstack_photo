@@ -18,7 +18,7 @@ Each user has a profile page.
 ![profile]
 
 They can edit their information and upload profile pictures, cover photos.
-![edit] 
+![edit]  
 
 Explore let's you see the latest photos from other users.
 ![explore]
