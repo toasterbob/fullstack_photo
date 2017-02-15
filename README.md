@@ -93,7 +93,7 @@ All of the React components, store, actions, reducers, etc... are stored in the 
 
 ### Babel
 
-Babel was used to transpile the jsx into vanilla Javascript.  
+Babel was used to transpile the .jsx into vanilla Javascript.  
 
 
 
