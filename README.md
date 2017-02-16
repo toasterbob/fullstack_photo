@@ -97,7 +97,7 @@ Babel was used to transpile the .jsx into vanilla Javascript.
 
 
 
-## Future Implementations
+## Future Implementations 
 
 Future implementations will build out the ability to edit and delete photos and journal entries.  
 
