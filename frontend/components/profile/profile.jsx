@@ -24,7 +24,7 @@ class Profile extends React.Component {
       profile_pic_url: '',
 			modalOpen: false,
 			idPresent: false,
-			layout: "photos"
+			layout: "journal"
 		};
 		this.openModal = this.openModal.bind(this);
 		this.closeModal = this.closeModal.bind(this);
@@ -227,13 +227,13 @@ class Profile extends React.Component {
 						<hr/>
 						<div className="profile-menu">
 							<h3>
+								<div onClick={this.handleJournal}>Journal &nbsp; &nbsp;</div>
+							</h3>
+							<h3>
 								<div onClick={this.handlePhotos}>Photos &nbsp; &nbsp;</div>
 							</h3>
 							<h3>
-								<div onClick={this.handleAbout}>About &nbsp; &nbsp;</div>
-							</h3>
-							<h3>
-								<div onClick={this.handleJournal}>Journal</div>
+								<div onClick={this.handleAbout}>About </div>
 							</h3>
 						</div>
 						<hr/>
